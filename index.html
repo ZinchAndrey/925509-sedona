@@ -11,7 +11,7 @@
     <header class = "main-header">
       <nav class = "main-navigation">
           <a class = "main-header-logo">
-            <img src ="img/index-logo.jpg" alt ="Логотип сайта">
+            <img src ="img/index-logo.jpg" width = "100" height = "100" alt ="Логотип сайта">
           </a>
           <ul class = "site-navigation">
               <li><a href ="info.html">Информация </a></li>
@@ -21,9 +21,20 @@
           </ul>
       </nav>
      </header>  
-     <main>
+     <main class = "container">
       <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1> <!--Для читалок-->
-      
+         <section class = "slogan">  <!--данный блок выполняем набором изображений для ускорения загрузки сайта, т.к. в блоке содержится 4 шрифта-->
+             <img src = "img/welcome-text.jpg" alt ="Welcome">  <!--возможно, класс необходимо дать каждому изображению-->
+             <img src = "img/gorgeous-text.jpg" width = "100" height = "100" alt ="to the gorgeous">
+             <img src = "img/sedona-text.jpg" width = "100" height = "100" alt ="SEDONA">
+             <img src = "img/cite-text.jpg" width = "100" height = "100" alt ="because the grand canyon sucks">
+         </section>
+         <section class = "features">
+             <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+             <h2 class = "visually-hidden">Преимущества Седоны</h2>
+             <b>Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон</b>
+         </section>
+         
     </main>
     
     <footer class = "main-footer">
@@ -39,7 +50,7 @@
         </div>    
          <p class ="creator-logo">  
             <a href ="https://htmlacademy.ru/">Website by
-                <img src ="img/html-academy-logo" alt ="html academy logo">
+                <img src ="img/html-academy-logo" width = "100" height = "100" alt ="html academy logo">
             </a>
          </p> 
     </footer>  
