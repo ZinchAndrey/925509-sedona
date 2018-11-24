@@ -38,7 +38,49 @@
                 <div class="booking-header">
                     <span>Заинтересовались?</span> 
                     <b>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
-                </div>    
+                </div>
+                <div class="booking-form">
+                    <h2>Поиск гостиницы в Седоне</h2>
+                    <form action="https://www.sedona.com" method="get">
+                        <ul>
+                            <li>
+                                <label>Дата заезда:
+                                    <select name="check-in">
+                                        <option value="24.04.2017">24 апреля 2017</option>
+                                    </select>
+                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon"> <!--не очень понимаю как быть с иконкой календаря, она видимо находится поверх выпадающего поля, но должна быть кликабельна, поэтому она тоже в <label>  -->
+                                </label>
+                            </li>
+                            <li>
+                                <label>Дата выезда:
+                                    <select name="check-out">
+                                        <option value="04.07.2017">04 июля 2017</option>
+                                    </select>
+                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon">
+                                </label>
+                            </li>
+                            <li>
+                                <label>Взрослые:
+                                    <select name="number-of-adults"> <!--пока сделал выпадающий список, думаю, что в дальнейшем + и - будут кнопками, которые изменяют значение атрибута value -->
+                                        <option value="2">2</option>
+                                        <option value="1">1</option>
+                                        <option value="0">0</option>
+                                    </select>
+                                </label>  
+                            </li>
+                            <li>
+                                <label>Дети:
+                                    <select name="number-of-kids">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </label>    
+                            </li>   
+                        </ul>   
+                        <input type="submit" value="Найти">
+                    </form>    
+                </div>
             </section>
         </main>
         <footer class="main-footer">
