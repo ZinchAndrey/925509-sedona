@@ -45,40 +45,30 @@
                         <ul>
                             <li>
                                 <label>Дата заезда:
-                                    <select name="check-in">
-                                        <option value="24.04.2017">24 апреля 2017</option>
-                                    </select>
+                                    <input type="text" name="check-in" value="24 апреля 2017">
                                     <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon"> <!--не очень понимаю как быть с иконкой календаря, она видимо находится поверх выпадающего поля, но должна быть кликабельна, поэтому она тоже в <label>  -->
                                 </label>
                             </li>
                             <li>
                                 <label>Дата выезда:
-                                    <select name="check-out">
-                                        <option value="04.07.2017">04 июля 2017</option>
-                                    </select>
+                                    <input type="text" name="check-out" value="04 июля 2017">
                                     <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon">
                                 </label>
                             </li>
                             <li>
-                                <label>Взрослые:
-                                    <select name="number-of-adults"> <!--пока сделал выпадающий список, думаю, что в дальнейшем + и - будут кнопками, которые изменяют значение атрибута value -->
-                                        <option value="2">2</option>
-                                        <option value="1">1</option>
-                                        <option value="0">0</option>
-                                    </select>
-                                </label>
+                                <label for="adults">Взрослые:</label>  
+                                <button class="minus">-</button>
+                                <input id="adults" type="text" name="number-of-adults" value="2"> <!--пока сделал выпадающий список, думаю, что в дальнейшем + и - будут кнопками, которые изменяют значение атрибута value -->
+                                <button class="plus">+</button>
                             </li>
                             <li>
-                                <label>Дети:
-                                    <select name="number-of-kids">
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </label>
+                                <label for="kids">Дети:</label>
+                                <button class="minus">-</button>
+                                <input id="kids" type="text" name="number-of-kids" value="0">
+                                <button class="plus">+</button>
                             </li>
                         </ul>
-                        <input type="submit" value="Найти">
+                        <button class="search-button">Найти</button>
                     </form>
                 </div>
             </section>
