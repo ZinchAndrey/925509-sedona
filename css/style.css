@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif; /* нужно тут Arial добавлять? */
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.main-navigation a{   /* почему здесь, если я оставлю только .main-navigation, цвет ссылки останется синим? Значение специфичности же 10. а у тега <a> значение специфичности 01 ??? */
+    font-weight: 700;
+    color: black;
+    background-color: white;
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #81b3d2;
+}
+
+.site-navigation a:active {
+    color: #b2b2b2;
+}
+
+.features h2{ 
+    font-size: 21px;
+    line-height: 26px;    
+    font-weight: 700;
+    text-align: center;
+}
+
+.reasons {
+    color: #333333;
+    background-color: white;
+    font-weight: 400;
+    text-align: center;
+}
+
+.offer-text  {
+    color: #333333;
+    background-color: white;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+}
+
+.motivation-text {
+    font-size: 30px;
+    line-height: 36px;    
+    font-weight: 700;
+    text-align: center;
+}
+
+.booking form {
+    background-color: white;
+    text-align: center;
+}
+
+.booking-form h2 {
+    color: white;
+    background-color: #766357;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.booking-form h2:hover,
+.booking-form h2:focus {
+    background-color: #604e43;
+}
+
+.booking-form h2:active {   /*в фотошопе текст белый, но по ходу полупрозрачность. Я пипеткой цвет взял*/
+    color: #857871;
+    background-color: #503e33;
+}
+
+.booking-form ul {
+    list-style: none;
+}
+
+.booking-form li,
+.booking-form input {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.quantity-button {
+    font:inherit;
+    color: #a9a9a9;
+    background-color: #f2f2f2;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.quantity-button:hover,
+.quantity-button:focus {
+    color: black;
+}
+
+.quantity-button:active {
+    color: #81b3d2;
+}
+
+.booking-form input {
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.booking-form input:hover {
+    background-color: #ebebeb;
+}
+
+.booking-form input:focus {
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #e5e5e5; /*у меня при фокусе все равно синим обводится, а не серым */
+}
+
+.search-button {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: white;
+    background-color: #81b3d2;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.search-button:hover,
+.search-button:focus {
+    background-color: #669ec0;
+}
+
+.search-button:active {
+    background-color: #5496bd;
+    color: #88b6d1; /*здесь точно так же в фотошопе белый цвет, поэтому пипетку использовал*/
+}
+
+.hashtag {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+    
+.footer-social {
+    text-align: center;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.creator-logo {
+   /* font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: black;
+    background-color: white; */
+    
+}
+
+
+/* -----------  ниже вторая страница */
+
+.hotels-list {
+    list-style: none;
+}
+
+.hotel-name {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700; 
+}
+
+.hotel-name:hover,
+.hotel-name:focus {
+    color: #81b3d2;
+}
+
+.hotel-name:active {
+    color: #b2b2b2;
+}
+
+hotel-type,
+hotel-price {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.hotels .more {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    color: white;
+    background-color: #81b3d2;
+}
+
+.hotels .more:hover,
+.hotels .more:focus {
+    background-color: #5496bd;
+}
+
+.hotels .more:active {
+    background-color: #669ec0;
+    color: #88b6d1;
+}
+
+.hotels .booking  {
+    color: white;
+    background-color: #766357;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+
+}
+
+.hotels .booking:hover,
+.hotels .booking:focus {
+    background-color: #604e43;
+}
+
+.hotels .booking:active {
+    color: #857871;
+    background-color: #503e33;
+}
+
+.hotel-rating {
+    color: #666666;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    line-height: 21px;
+
+}

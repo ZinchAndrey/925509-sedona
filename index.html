@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Седона</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -30,14 +33,15 @@
                 <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA 'because the grand canyon sucks'">
             </section>
             <section class="features">
-                <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+                <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2> 
                 <h2 class="visually-hidden">Преимущества Седоны</h2>
-                <b>Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон</b>
+                <b class="reasons">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон</b>
             </section>
             <section class="booking">
                 <div class="booking-header">
-                    <span>Заинтересовались?</span>
-                    <b>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
+                    <span class="motivation-text">Заинтересовались?</span> <!-- или здесь и в <b> вместо классов использовать для стилизации вложенность в div? Напр .booking-header span {...}-->
+                    <br>
+                    <b class="offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
                 </div>
                 <div class="booking-form">
                     <h2>Поиск гостиницы в Седоне</h2>
@@ -46,7 +50,7 @@
                             <li>
                                 <label>Дата заезда:
                                     <input type="text" name="check-in" value="24 апреля 2017">
-                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon"> <!--не очень понимаю как быть с иконкой календаря, она видимо находится поверх выпадающего поля, но должна быть кликабельна, поэтому она тоже в <label>  -->
+                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon">
                                 </label>
                             </li>
                             <li>
@@ -57,15 +61,15 @@
                             </li>
                             <li>
                                 <label for="adults">Взрослые:</label>  
-                                <button class="minus">-</button>
-                                <input id="adults" type="text" name="number-of-adults" value="2"> <!--пока сделал выпадающий список, думаю, что в дальнейшем + и - будут кнопками, которые изменяют значение атрибута value -->
-                                <button class="plus">+</button>
+                                <button class="quantity-button minus">-</button>
+                                <input id="adults" type="text" name="number-of-adults" value="2">
+                                <button class="quantity-button plus">+</button>
                             </li>
                             <li>
                                 <label for="kids">Дети:</label>
-                                <button class="minus">-</button>
+                                <button class="quantity-button minus">-</button>
                                 <input id="kids" type="text" name="number-of-kids" value="0">
-                                <button class="plus">+</button>
+                                <button class="quantity-button plus">+</button>
                             </li>
                         </ul>
                         <button class="search-button">Найти</button>
@@ -74,7 +78,7 @@
             </section>
         </main>
         <footer class="main-footer">
-            <p class="hashtag">
+            <p class="hashtag">   <!--правильно ли я понимаю, что здесь тоже div нужен, чтобы оцентровать в дальнейшем и задавать размеры и позицинирование данного блока? -->
                 <a>#VISITSEDONA</a>
             </p>
             <div class="footer-social">
