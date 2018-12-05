@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif; /* нужно тут Arial добавлять? */
+    font-family: 'PT Sans', 'Arial', sans-serif; 
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -22,7 +22,7 @@ a {
     margin: -1px;
 }
 
-.main-navigation a{   /* почему здесь, если я оставлю только .main-navigation, цвет ссылки останется синим? Значение специфичности же 10. а у тега <a> значение специфичности 01 ??? */
+.main-navigation a {  
     font-weight: 700;
     color: black;
     background-color: white;
@@ -89,8 +89,8 @@ a {
     background-color: #604e43;
 }
 
-.booking-form h2:active {   /*в фотошопе текст белый, но по ходу полупрозрачность. Я пипеткой цвет взял*/
-    color: #857871;
+.booking-form h2:active { 
+    color: rgba(255, 255, 255, .3);
     background-color: #503e33;
 }
 
@@ -136,7 +136,9 @@ a {
 .booking-form input:focus {
     list-style: none;
     background-color: #ffffff;
-    border-color: #e5e5e5; /*у меня при фокусе все равно синим обводится, а не серым */
+    border-color: #e5e5e5;
+    outline-width: 2px;
+    outline-color: #e5e5e5;
 }
 
 .search-button {
@@ -157,7 +159,7 @@ a {
 
 .search-button:active {
     background-color: #5496bd;
-    color: #88b6d1; /*здесь точно так же в фотошопе белый цвет, поэтому пипетку использовал*/
+    color: rgba(255, 255, 255, .3);
 }
 
 .hashtag {
@@ -228,7 +230,7 @@ hotel-price {
 
 .hotels .more:active {
     background-color: #669ec0;
-    color: #88b6d1;
+    color: rgba(255, 255, 255, .3);
 }
 
 .hotels .booking  {
@@ -246,7 +248,7 @@ hotel-price {
 }
 
 .hotels .booking:active {
-    color: #857871;
+    color: rgba(255, 255, 255, .3);
     background-color: #503e33;
 }
 
