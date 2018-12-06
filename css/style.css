@@ -207,8 +207,8 @@ a {
     color: #b2b2b2;
 }
 
-hotel-type,
-hotel-price {
+.hotel-type,
+.hotel-price {
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -257,5 +257,13 @@ hotel-price {
     background-color: #f2f2f2;
     font-size: 14px;
     line-height: 21px;
+
+}
+
+/* ------------ ниже разметка по горизонтали*/
+
+.main-header {
+    background-color: rgba(0, 0, 0, .3);
+    min-height: 35px;
 
 }
