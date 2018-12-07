@@ -7,7 +7,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: black;
-    background-color: white;
+    background-color: #f2f2f2; /* здесь все же белый должен быть или цвет отступов по бокам?*/
 }
 
 a {
@@ -52,7 +52,7 @@ a {
     color: #333333;
     background-color: white;
     font-weight: 400;
-    text-align: center;
+    text-align: center; /* текст не по центру почему-то*/ 
 }
 
 .offer-text  {
@@ -72,7 +72,7 @@ a {
 
 .booking form {
     background-color: white;
-    text-align: center;
+  /*  text-align: center; */
 }
 
 .booking-form h2 {
@@ -176,14 +176,14 @@ a {
     list-style: none;
 }
 
-.creator-logo {
-   /* font-size: 14px;
+/*.creator-logo {
+    font-size: 14px;
     line-height: 26px;
     font-weight: 400;
     color: black;
-    background-color: white; */
+    background-color: white; 
     
-}
+} */
 
 
 /* -----------  ниже вторая страница */
@@ -262,8 +262,135 @@ a {
 
 /* ------------ ниже разметка по горизонтали*/
 
+.main-header,
+.container,
+.main-footer {
+    width: 1200px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: white;
+}   /*типа центровщик, но при масштабировании все к левому краю прилипает, так и должно быть?*/
+
+/*body {
+    background-image: url(img/background-photo.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;   */
+}
+
 .main-header {
-    background-color: rgba(0, 0, 0, .3);
-    min-height: 35px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.site-navigation {
+    display: flex;
+    width: 1200px;
+    max-height: 56px; /* временно*/
+    margin: 0;  
+    padding: 0;
+    justify-content: space-between;   
+}
+
+.nav-item {
+    width: 240px;
+    text-align: center;
+}
+
+.welcome {
+    width: 459px; /* можно ли без указания ширины отцентрировать*/
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.features {
+    width: 575px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+
+.booking-header {
+    width: 568px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+    
+.booking-form {    /* вот здесь те же свойства, что и выше, лучше просто через запятую класс добавить к .booking-header в части одинаковых свойств или для удобства корректировки/проверки лучше все классы отдельно прописывать? */
+    width: 568px;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    border: solid 1px black; /* временно */
+}
+
+.booking-list {
+    padding: 0px;
+}
+
+.booking-form form {
+    width: 460px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-list li:nth-child(3){
+    display: inline-block;  /* не могу понять как расположить в одной строке эти два элемента, это либо flex, либо inline-block? Плюс мне надо уменьшить ширину поля формы. + В первых двух полях формы на над полем иконка календаря висит, как с этим быть?*/
+}
+.booking-list li:nth-child(4){
+    display: inline-block;
+    padding-left: 55px;
+}
+
+.quantity-button plus,
+.quantity-button minus,
+.booking-list li:nth-child(3) input, /* можно ли такую вложенность использовать из 3 классов?*/
+.booking-list li:nth-child(4) input {
+    box-sizing: border-box;
+    width: 38px;
+    margin: 0;  /* хочу задать кнопкам и полю одинаковую ширину и поставить их рядом без отступов - не получается*/
+}
+
+.search-button {
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-footer {
+    display: flex;
+    width: 1200px;
+    padding: 0;
+    justify-content: space-between;
+    background-color: rgba(0,0,0, .3); /* временно*/
+    
 
 }
+
+.footer-social ul{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.hashtag {
+    margin-left: 133px;
+    vertical-align: middle;
+}
+
+.creator-logo {
+    margin-right: 102px;
+    vertical-align: middle;
+}
+
+.social-button {
+    background-color: #81b3d2;
+    width: 46px;
+    height: 48px;
+    vertical-align: middle;
+}
+
