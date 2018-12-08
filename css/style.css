@@ -299,10 +299,14 @@ a {
     width: 459px; /* можно ли без указания ширины отцентрировать*/
     margin-left: auto;
     margin-right: auto; 
+    
+    /* временно */
+    background-color: rgba(0, 0, 0, .5);  
 }
 
 .features {
     width: 575px;
+    margin-top: 150px;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -313,18 +317,30 @@ a {
     text-align: center;
     margin-left: auto;
     margin-right: auto; 
+    margin-top: 55px;
 }
-    
+
+.offer-text {
+    display: block;    /*  верно ли, что я тут блочную модель задал?  */
+    margin-top: 28px;
+}
+
 .booking-form {    /* вот здесь те же свойства, что и выше, лучше просто через запятую класс добавить к .booking-header в части одинаковых свойств или для удобства корректировки/проверки лучше все классы отдельно прописывать? */
     width: 568px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
  
     border: solid 1px black; /* временно */
 }
 
 .booking-list {
     padding: 0px;
+    margin: 0;
+}
+
+.booking-list li {
+    margin-bottom: 30px;
 }
 
 .booking-form form {
@@ -332,6 +348,12 @@ a {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.booking-form h2 {
+    margin: 0 auto 55px;
+    padding-bottom: 32px;
+    padding-top: 32px;
 }
 
 .booking-list li:nth-child(3){
@@ -352,9 +374,15 @@ a {
 }
 
 .search-button {
-    width: 458px;
+    box-sizing: border-box;
+    width: 458px;   /* почему-то ширина все равно считается с padding*/
     margin-left: auto;
     margin-right: auto;
+    margin-top: 25px; /* вот здесь мне не нравится как пришлось отступ задавать. В списке я сделал отступ вниз от каждого пункта, поэтом тут margin складываются*/
+    margin-bottom: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 .main-footer {
@@ -362,6 +390,8 @@ a {
     width: 1200px;
     padding: 0;
     justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 35px;
     background-color: rgba(0,0,0, .3); /* временно*/
     
 
