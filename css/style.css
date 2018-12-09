@@ -14,12 +14,25 @@ a {
     text-decoration: none;
 }
 
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-navigation a {  
@@ -283,20 +296,22 @@ a {
 
 .site-navigation {
     display: flex;
+    flex-wrap: wrap;
     width: 1200px;
-    max-height: 56px; /* временно*/
+    max-height: 56px; /* временно, пока эмблему под низ не уберу, скорее всего ее придется вывести из списка, чтобы флекс под нее не растягивался*/
     margin: 0;  
     padding: 0;
     justify-content: space-between;   
 }
 
-.nav-item {
+.site-navigation a { /* a, т.к. вся область должна быть ссылкой*/
+    display: block;
     width: 240px;
     text-align: center;
     padding: 16px 0px;
 }
 
-.nav-item:nth-child(3) {
+.site-navigation .main-header-logo {
     padding: 0;
 }
 
@@ -339,13 +354,34 @@ a {
     border: solid 1px black; /* временно */
 }
 
-.booking-list {
-    padding: 0px;
+/*  ------- вообще всю форму бронирования проще было бы сделать на флексах, но у меня список и из-за этого флексами не получится. Грамотнее было бы контейнером сделать левую часть с названиями и правую с формами и позиционировать внутри было бы проще  */
+
+
+.booking-list {   
+    padding: 0;
     margin: 0;
+    position: relative;
 }
 
 .booking-list li {
     margin-bottom: 30px;
+    width: 460px;
+}
+
+.booking-list li::after {  /*??? иконка не отрисовывается   */
+    content: "";
+    position: absolute;
+    /*top: 27px;*/
+    right: 24px;
+    top: 5px;
+    background-image: url("img/calendar.svg");
+    width: 21px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #ff0000;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 .booking-form form {
@@ -361,12 +397,25 @@ a {
     padding-top: 32px;
 }
 
+/*.booking-list {
+    display: flex;
+    flex-wrap: wrap;
+}  ----- это если на флексах*/
+
+.booking-list input {
+    width: 345px;
+    padding: 4px 15px;
+    box-sizing: border-box;
+}
+
 .booking-list li:nth-child(3){
     display: inline-block;  /* не могу понять как расположить в одной строке эти два элемента, это либо flex, либо inline-block? Плюс мне надо уменьшить ширину поля формы. + В первых двух полях формы на над полем иконка календаря висит, как с этим быть?*/
+    width: 230px; /* временно и неточно*/
 }
 .booking-list li:nth-child(4){
     display: inline-block;
     padding-left: 55px;
+    width: 150px; /*временно и неточно */
 }
 
 .quantity-button plus,
@@ -408,8 +457,7 @@ a {
     width: 150px;
     justify-content: space-between;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
 }
 
@@ -425,6 +473,9 @@ a {
 
 .social-button {
     background-color: #81b3d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 46px;
     height: 48px;
     vertical-align: middle;
@@ -434,14 +485,47 @@ a {
 
 .hotels-list li {
     display: flex;
-    margin: 30px 0;
+   /* flex-wrap: wrap;*/
+    margin: 30px 73px;
 }
 
 .hotel-item {
     width: 260px;
     margin-left: 30px;
+    position: relative;
 }
 
+.hotel-item .more,
+.hotel-item .booking {
+    position: absolute;
+    bottom: 0;
+    padding: 3px 15px;
+}
 
+.hotel-item .more {
+    left: 0;
+    box-sizing: border-box;
+    
+}
 
+.hotel-item .booking {
+    right: 0;
+    box-sizing: border-box;
+}
 
+.rating {
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+}
+
+.rating .hotel-rating {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+/* ??? звезду нужно повторить N раз */
