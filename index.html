@@ -8,91 +8,99 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="main-header">
-            <nav class="main-navigation">
-                <ul class="site-navigation">
-                    <li class="nav-item"><a href="info.html">Информация </a></li>
-                    <li class="nav-item"><a href="Foto_and_video.html">Фото  и видео</a></li>
-                    <li class="nav-item">
-                        <a class="main-header-logo">
-                            <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта">
-                        </a>
-                    </li>
-                    <li class="nav-item"><a href="Map.html">Карта штата</a></li>
-                    <li class="nav-item"><a href="Hotels.html">Гостиницы</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="container">
-            <section class="background">
-               <img class="background-photo" src="img/background-photo.jpg" width="1200" height="800">
-                <img class="background-photo" src="img/polygon.svg" width="1201" height="59"> <!--Здесь изображение, так как форма может быть любой и более сложной, чем несколько треугольников -->
-            </section>
-            <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1> <!--Для читалок-->
-            <section class="welcome">  <!--данный блок выполняем набором изображений для ускорения загрузки сайта, т.к. в блоке содержится 4 шрифта-->
-                <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA 'because the grand canyon sucks'">
-            </section>
-            <section class="features">
-                <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2> 
-                <h2 class="visually-hidden">Преимущества Седоны</h2>
-                <b class="reasons">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон</b>
-            </section>
-            <section class="booking">
-                <div class="booking-header">
-                    <span class="motivation-text">Заинтересовались?</span> <!-- или здесь и в <b> вместо классов использовать для стилизации вложенность в div? Напр .booking-header span {...}-->
-                    <br>
-                    <b class="offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
+        <div class="main-container">
+            <header class="main-header">
+                <nav class="main-navigation">
+                    <ul class="site-navigation">
+                        <li class="nav-item"><a href="info.html">Информация </a></li>
+                        <li class="nav-item"><a href="Foto_and_video.html">Фото  и видео</a></li>
+                        <li class="nav-item">
+                            <a class="main-header-logo">
+                                <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта">
+                            </a>
+                        </li>
+                        <li class="nav-item"><a href="Map.html">Карта штата</a></li>
+                        <li class="nav-item"><a href="Hotels.html">Гостиницы</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="container">
+                <!-- <section class="background">
+                   <img class="background-photo" src="img/background-photo.jpg" width="1200" height="800">
+                    <img class="background-photo" src="img/polygon.svg" width="1201" height="59"> <!--Здесь изображение, так как форма может быть любой и более сложной, чем несколько треугольников --
+                </section> -->
+                <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1> <!--Для читалок-->
+                <section class="welcome">  <!--данный блок выполняем набором изображений для ускорения загрузки сайта, т.к. в блоке содержится 4 шрифта-->
+                    <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA 'because the grand canyon sucks'">
+                </section>
+                <div class="background-bottom"><img src="img/polygon.svg" width="1201" height="59"></div>
+                <section class="features">
+                    <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2> 
+                    <h2 class="visually-hidden">Преимущества Седоны</h2>
+                    <b class="reasons">Рассмотрим пять причин, по которым Седона круче, чем Гранд Каньон</b>
+                </section>
+                <section class="booking">
+                    <div class="booking-header">
+                        <span class="motivation-text">Заинтересовались?</span> <!-- или здесь и в <b> вместо классов использовать для стилизации вложенность в div? Напр .booking-header span {...}-->
+                        <br>
+                        <b class="offer-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</b>
+                    </div>
+                    <div class="booking-form">
+                        <h2>Поиск гостиницы в Седоне</h2>
+                        <form action="https://www.sedona.com" method="get">
+                            <ul class="booking-list">
+                                <li>
+                                    <label>Дата заезда:
+                                        <input type="text" name="check-in" value="24 апреля 2017">
+                                        <!-- <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon"> -->
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>Дата выезда:
+                                        <input type="text" name="check-out" value="04 июля 2017">
+                                        <!-- <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon"> -->
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="adults">Взрослые:</label>  
+                                    <button class="quantity-button minus">-</button>
+                                    <input id="adults" type="text" name="number-of-adults" value="2">
+                                    <button class="quantity-button plus">+</button>
+                                </li>
+                                <li>
+                                    <label for="kids">Дети:</label>
+                                    <button class="quantity-button minus">-</button>
+                                    <input id="kids" type="text" name="number-of-kids" value="0">
+                                    <button class="quantity-button plus">+</button>
+                                </li>
+                            </ul>
+                            <button class="search-button">Найти</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <footer class="main-footer">
+                <p class="hashtag">   <!--правильно ли я понимаю, что здесь тоже div нужен, чтобы оцентровать в дальнейшем и задавать размеры и позицинирование данного блока? -->
+                    <a>#VISITSEDONA</a>
+                </p>
+                <div class="footer-social">
+                    <ul>
+                        <li>
+                            <a class="social-button" href="#"><img src="img/twitter-icon.svg">
+                                <span class="visually-hidden">"Twitter"</span>
+                             
+                            </a>
+                        </li> <!-- добавить по аналогии везде span с классом visuslly hidden-->
+                        <li><a class="social-button" href="#"><img src="img/facebook-icon.svg" atl="Facebook"></a></li>
+                        <li><a class="social-button" href="#"><img src="img/youtube-icon.svg" atl="YouTube"></a></li>
+                    </ul>
                 </div>
-                <div class="booking-form">
-                    <h2>Поиск гостиницы в Седоне</h2>
-                    <form action="https://www.sedona.com" method="get">
-                        <ul class="booking-list">
-                            <li>
-                                <label>Дата заезда:
-                                    <input type="text" name="check-in" value="24 апреля 2017">
-                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon">
-                                </label>
-                            </li>
-                            <li>
-                                <label>Дата выезда:
-                                    <input type="text" name="check-out" value="04 июля 2017">
-                                    <img src="img/calendar.svg" width="21" height="22" alt="calendar-icon">
-                                </label>
-                            </li>
-                            <li>
-                                <label for="adults">Взрослые:</label>  
-                                <button class="quantity-button minus">-</button>
-                                <input id="adults" type="text" name="number-of-adults" value="2">
-                                <button class="quantity-button plus">+</button>
-                            </li>
-                            <li>
-                                <label for="kids">Дети:</label>
-                                <button class="quantity-button minus">-</button>
-                                <input id="kids" type="text" name="number-of-kids" value="0">
-                                <button class="quantity-button plus">+</button>
-                            </li>
-                        </ul>
-                        <button class="search-button">Найти</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <footer class="main-footer">
-            <p class="hashtag">   <!--правильно ли я понимаю, что здесь тоже div нужен, чтобы оцентровать в дальнейшем и задавать размеры и позицинирование данного блока? -->
-                <a>#VISITSEDONA</a>
-            </p>
-            <div class="footer-social">
-                <ul>
-                    <li class="social-button"><a href="#"><img src="img/twitter-icon.svg" atl="Twitter"></a></li> <!-- добавить span с классом visuslly hidden-->
-                    <li class="social-button"><a href="#"><img src="img/facebook-icon.svg" atl="Facebook"></a></li>
-                    <li class="social-button"><a href="#"><img src="img/youtube-icon.svg" atl="YouTube"></a></li>
-                </ul>
-            </div>
-            <p class="creator-logo">
-                <a href="https://htmlacademy.ru/">Website by
-                    <img src="img/html-academy-logo.svg" width="115" height="41" alt="html academy logo">
-                </a>
-            </p>
-        </footer>
+                <p class="creator-logo">
+                    <a href="https://htmlacademy.ru/">Website by
+                        <img src="img/html-academy-logo.svg" width="115" height="41" alt="html academy logo">
+                    </a>
+                </p>
+            </footer>
+        </div>    
     </body>
 </html>

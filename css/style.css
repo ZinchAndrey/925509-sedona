@@ -15,24 +15,25 @@ a {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active) {
-  position: absolute;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.main-container {   /*??? не работает  */
+    margin: 0 auto;
 }
 
 .main-navigation a {  
@@ -62,6 +63,7 @@ img {
 }
 
 .reasons {
+    display: block;
     color: #333333;
     background-color: white;
     font-weight: 400;
@@ -284,14 +286,15 @@ img {
     background-color: white;
 }   /*типа центровщик, но при масштабировании все к левому краю прилипает, так и должно быть?*/
 
-/*body {
-    background-image: url(img/background-photo.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;   */
+.container {
+    background-image: url(../img/background-photo.jpg);
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+    background-size: 100% 515px;
 }
 
 .main-header {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .site-navigation {
@@ -316,19 +319,28 @@ img {
 }
 
 .welcome {
+    display: block;
     width: 459px; /* можно ли без указания ширины отцентрировать*/
     margin-left: auto;
     margin-right: auto; 
+        /* временно */
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 76px;
+}
+
+.background-bottom {
+    /*position: absolute;  ??? - здесь же можно без абсолюта?*/  
+    margin-top: 21px;   
     
-    /* временно */
-    background-color: rgba(0, 0, 0, .5);  
+    /* ??? снизу какое-то лишнее растояние у данного div, несколько пикселей вниз от картинки svg*/
 }
 
 .features {
     width: 575px;
-    margin-top: 150px;
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto; 
+    background-color: white;
 }
 
 
@@ -368,20 +380,25 @@ img {
     width: 460px;
 }
 
-.booking-list li::after {  /*??? иконка не отрисовывается   */
+.booking-list li:nth-child(1)::after,
+.booking-list li:nth-child(2)::after { 
     content: "";
     position: absolute;
-    /*top: 27px;*/
-    right: 24px;
-    top: 5px;
-    background-image: url("img/calendar.svg");
+    right: 20px;
+    top: 6px;
+    background-image: url("../img/calendar.svg");
     width: 21px;
     height: 22px;
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-color: #ff0000;
-    z-index: 1;
-    opacity: 0.5;
+}
+
+.booking-list li:nth-child(2)::after { 
+    right: 20px;
+    top: 70px;
+}
+
+.booking-list li::after {
+    
 }
 
 .booking-form form {
@@ -405,7 +422,9 @@ img {
 .booking-list input {
     width: 345px;
     padding: 4px 15px;
+    padding-right: 40px;
     box-sizing: border-box;
+    margin-left: 17px;
 }
 
 .booking-list li:nth-child(3){
@@ -481,6 +500,24 @@ img {
     vertical-align: middle;
 }
 
+.social-button:hover,
+.social-button:focus {
+    background-color: #669ec0;
+}
+
+.social-button:active {
+    background-color: #5496bd;
+}
+
+
+.social-button img {
+    display: block;
+}
+
+.social-button img:active {
+    opacity: 0.3;
+}   /* ??? не пойму, как без инлайна сделать так, чтобы при нажатии на весь квадрат иконка opacity приобретала, а не только на иконку*/
+
 /*---------стилизация 2ой страницы------- */
 
 .hotels-list li {
@@ -529,3 +566,4 @@ img {
 }
 
 /* ??? звезду нужно повторить N раз */
+
