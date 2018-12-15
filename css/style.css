@@ -40,6 +40,7 @@ img {
     font-weight: 700;
     color: black;
     background-color: white;
+    position: relative;
 }
 
 .site-navigation {
@@ -122,7 +123,7 @@ img {
 }
 
 .quantity-button {
-    font:inherit;
+    font: inherit;
     color: #a9a9a9;
     background-color: #f2f2f2;
     border: none;
@@ -211,6 +212,7 @@ img {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700; 
+    margin: 0;
 }
 
 .hotel-name:hover,
@@ -279,6 +281,7 @@ img {
 
 .main-header,
 .container,
+.inner-container, 
 .main-footer {
     width: 1200px;
     margin-left: 40px;
@@ -301,17 +304,39 @@ img {
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
-    max-height: 56px; /* временно, пока эмблему под низ не уберу, скорее всего ее придется вывести из списка, чтобы флекс под нее не растягивался*/
     margin: 0;  
     padding: 0;
-    justify-content: space-between;   
+    background-color: white;
+}
+
+/* выравниевание элемнтов  с местом для эмблемы */ 
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(4) {
+    margin: 0;
+}
+
+.site-navigation li:nth-child(2) {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.site-navigation li:nth-child(3) {
+    margin-right: 0;
+    margin-left: auto;
 }
 
 .site-navigation a { /* a, т.к. вся область должна быть ссылкой*/
     display: block;
-    width: 240px;
+    width: 239px;
     text-align: center;
     padding: 16px 0px;
+}
+
+.logo-container {
+    position: absolute;
+    width: 140px;
+    top: 0;
+    left: 570px; /* ??? почему позицинирование идет от левого окна, а не от main-navigation? */ 
 }
 
 .site-navigation .main-header-logo {
@@ -357,12 +382,12 @@ img {
     margin-top: 28px;
 }
 
-.booking-form {    /* вот здесь те же свойства, что и выше, лучше просто через запятую класс добавить к .booking-header в части одинаковых свойств или для удобства корректировки/проверки лучше все классы отдельно прописывать? */
+.booking-form {
     width: 568px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
- 
+    
     border: solid 1px black; /* временно */
 }
 
@@ -420,42 +445,56 @@ img {
 }  ----- это если на флексах*/
 
 .booking-list input {
-    width: 345px;
-    padding: 4px 15px;
-    padding-right: 40px;
+    width: 346px;
+    padding: 5px 15px;
     box-sizing: border-box;
-    margin-left: 17px;
+    margin-left: auto;
+}
+
+
+.booking-list input:nth-child(1),
+.booking-list input:nth-child(2) {
+    /* float: right; */ 
+    /* ?? флоат по вертикали выравнивает, а по горизонтали смещение происходит */ 
 }
 
 .booking-list li:nth-child(3){
-    display: inline-block;  /* не могу понять как расположить в одной строке эти два элемента, это либо flex, либо inline-block? Плюс мне надо уменьшить ширину поля формы. + В первых двух полях формы на над полем иконка календаря висит, как с этим быть?*/
-    width: 230px; /* временно и неточно*/
+    display: inline-block;  /* ??? не могу понять как расположить в одной строке эти два элемента, это либо flex, либо inline-block? Плюс мне надо уменьшить ширину поля формы. + В первых двух полях формы на над полем иконка календаря висит, как с этим быть?*/
+    
 }
 .booking-list li:nth-child(4){
     display: inline-block;
-    padding-left: 55px;
-    width: 150px; /*временно и неточно */
+    
 }
 
-.quantity-button plus,
-.quantity-button minus,
+.booking-list li:nth-child(3) {
+    display: flex;
+}
+
+.quantity-button,
+.quantity-button,
 .booking-list li:nth-child(3) input, /* можно ли такую вложенность использовать из 3 классов?*/
 .booking-list li:nth-child(4) input {
     box-sizing: border-box;
     width: 38px;
+    height: 38px;
     margin: 0;  /* хочу задать кнопкам и полю одинаковую ширину и поставить их рядом без отступов - не получается*/
 }
 
 .search-button {
     box-sizing: border-box;
-    width: 458px;   /* почему-то ширина все равно считается с padding*/
+    width: 460px;   
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px; /* вот здесь мне не нравится как пришлось отступ задавать. В списке я сделал отступ вниз от каждого пункта, поэтом тут margin складываются*/
-    margin-bottom: 70px;
+    margin-bottom: 55px;
     padding-top: 20px;
     padding-bottom: 20px;
 
+}
+
+.booking {
+    margin-bottom: 78px;
 }
 
 .main-footer {
@@ -463,9 +502,8 @@ img {
     width: 1200px;
     padding: 0;
     justify-content: space-between;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    margin-top: 78px;
+    /*padding-top: 35px;
+    padding-bottom: 35px;*/
     background-color: rgba(0,0,0, .3); /* временно*/
     
 
@@ -481,13 +519,36 @@ img {
 }
 
 .hashtag {
+    margin: 0;
     margin-left: 133px;
+    margin-top: 50px;
     vertical-align: middle;
 }
 
+
 .creator-logo {
-    margin-right: 102px;
+    margin: 0;
+    margin-top: 39px;
+    margin-right: 100px;
     vertical-align: middle;
+
+}
+
+.creator-logo path {
+    fill: #231f20;
+}
+
+.creator-logo:focus path,
+.creator-logo:hover path {
+    fill: #81b3d2;
+}
+
+.creator-logo:active path {
+    fill: #bdbbbc;
+}
+
+.footer-social {
+    margin: 36px auto;
 }
 
 .social-button {
@@ -498,6 +559,7 @@ img {
     width: 46px;
     height: 48px;
     vertical-align: middle;
+    
 }
 
 .social-button:hover,
@@ -518,12 +580,33 @@ img {
     opacity: 0.3;
 }   /* ??? не пойму, как без инлайна сделать так, чтобы при нажатии на весь квадрат иконка opacity приобретала, а не только на иконку*/
 
+
 /*---------стилизация 2ой страницы------- */
+
+.active-page {
+    color: #766357;
+}
+
+.hotels-list {
+    padding: 0;
+    margin: 0;
+}
 
 .hotels-list li {
     display: flex;
-   /* flex-wrap: wrap;*/
-    margin: 30px 73px;
+    padding: 30px 73px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-price, 
+.hotel-type {
+    display: inline-block;
+    margin: 0;
+}
+
+.hotel-type {
+    width: 110px;
+    margin-right: 1px;
 }
 
 .hotel-item {
@@ -532,12 +615,11 @@ img {
     position: relative;
 }
 
-.hotel-item .more,
+/*.hotel-item .more,
 .hotel-item .booking {
     position: absolute;
     bottom: 0;
     padding: 3px 15px;
-}
 
 .hotel-item .more {
     left: 0;
@@ -549,21 +631,40 @@ img {
     right: 0;
     box-sizing: border-box;
 }
+}*/
+
+.hotel-item .more,
+.hotel-item .booking {
+    display: inline-block;
+    padding: 3px 15px;
+    margin-bottom: 0;  /*??? почему это не приводит к прилипанию кнопки к нижней части родительского элемента??*/
+    margin-top: 10px;  */
+}
+
+.hotel-item .more {
+    margin-right: 2px;
+}
 
 .rating {
     margin-right: 0;
     margin-left: auto;
-    position: relative;
+    /*position: relative;*/
 }
 
-.rating .hotel-rating {
+/*.rating .hotel-rating {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 120px;
     text-align: right;
     padding-right: 15px;
-}
+}*/
 
-/* ??? звезду нужно повторить N раз */
+.hotel-rating {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    margin: 0;
+
+}
 

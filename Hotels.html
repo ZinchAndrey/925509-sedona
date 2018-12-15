@@ -10,40 +10,48 @@
     <body>
         <header class="main-header">
             <nav class="main-navigation">
+                <div class="logo-container">
+                    <a class="main-header-logo" href="index.html">
+                            <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта">
+                    </a>
+                </div>
                 <ul class="site-navigation">
-                    <li><a href="info.html">Информация </a></li>
-                    <li><a href="Foto_and_video.html">Фото  и видео</a></li>
-                    <li>
-                        <a class="main-header-logo" href="index.html">
+                    <li class="nav-item"><a href="info.html">Информация </a></li>
+                    <li class="nav-item"><a href="Foto_and_video.html">Фото  и видео</a></li>
+                    <!-- <li class="nav-item">
+                        <a class="main-header-logo">
                             <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип сайта">
                         </a>
-                    </li>
-                    <li><a href="Map.html">Карта штата</a></li>
-                    <li><a href="Hotels.html">Гостиницы</a></li>
+                    </li> -->
+                    <li class="nav-item"><a href="Map.html">Карта штата</a></li>
+                    <li class="nav-item"><a href="Hotels.html"><span class="active-page">Гостиницы</span></a></li>
                 </ul>
             </nav>
         </header>  
-        <main class="container">
+        <main class="inner-container">
             <section class="hotels">
                 <ul class="hotels-list">
                     <li> 
                        <img src="img/amara-resort.jpg" alt="amara-resort">
                         <div class="hotel-item">
-                            <span class="hotel-name">Amara resort and spa </span>
+                            <h2 class="hotel-name">Amara resort and spa </h2>
                             <span class="hotel-type">Гостиница</span>
                             <span class="hotel-price">от 4000 руб </span>
                             <a class="more" href="amara-resort.html">Подробнее</a>
                             <a class="booking" href="booking.html">Забронировать</a>
                         </div>    
                         <div class="rating">    
+                            <img src="img/star.svg" alt="4 звезды">
+                            <img src="img/star.svg" alt="4 звезды">
+                            <img src="img/star.svg" alt="4 звезды">
+                            <img src="img/star.svg" alt="4 звезды">
                             <span class="hotel-rating">Рейтинг: 8,5</span>
-                            <img src="img/star.svg" alt="4 звезды"> <!--  здесь и далее в стилях далее прописать повторение звезды n-ое количество раз-->
                         </div>
                    </li>
                     <li> 
                         <img src="img/desert-quail-inn.jpg" alt="desert-quail-inn">
                         <div class="hotel-item"> 
-                            <span class="hotel-name">Desert Quail Inn</span>
+                            <h2 class="hotel-name">Desert Quail Inn</h2>
                             <span class="hotel-type">Мотель</span>
                             <span class="hotel-price">от 3000 руб </span>
                             <a class="more" href="desert-quail-inn.html">Подробнее</a>
@@ -52,12 +60,14 @@
                         <div class="rating">
                             <span class="hotel-rating">Рейтинг: 8,9</span>
                             <img src="img/star.svg" alt="3 звезды">
+                            <img src="img/star.svg" alt="3 звезды">
+                            <img src="img/star.svg" alt="3 звезды">
                         </div>
                     </li>
                     <li> 
                         <img src="img/villas-at-poco-diablo.jpg" alt="villas-at-poco-diablo">
                         <div class="hotel-item">
-                            <span class="hotel-name"> Villas at Poco Diablo</span>
+                            <h2 class="hotel-name"> Villas at Poco Diablo</h2>
                             <span class="hotel-type">Апартаменты</span>
                             <span class="hotel-price">от 2000 руб </span>
                             <a class="more" href="villas-at-poco-diablo.html">Подробнее</a>
@@ -65,6 +75,7 @@
                         </div>    
                         <div class="rating">
                             <span class="hotel-rating">Рейтинг: 9,2</span>
+                            <img src="img/star.svg" alt="2 звезды">
                             <img src="img/star.svg" alt="2 звезды">
                        </div>
                     </li>
