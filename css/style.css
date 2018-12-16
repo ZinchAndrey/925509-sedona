@@ -32,10 +32,22 @@ img {
     overflow: hidden;
 }
 
-.main-container {   /*??? не работает  */
-    width: 1200px;
+.main-container {
+    width: 1280px;
     margin: 0 auto;
     background-color: #f2f2f2;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.main-header, 
+.container, 
+.main-footer, 
+.inner-container {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.main-navigation {
     position: relative;
 }
 
@@ -70,7 +82,7 @@ img {
     color: #333333;
     background-color: white;
     font-weight: 400;
-    text-align: center; /* текст не по центру почему-то*/ 
+    text-align: center; 
 }
 
 .offer-text  {
@@ -194,16 +206,6 @@ img {
     list-style: none;
 }
 
-/*.creator-logo {
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 400;
-    color: black;
-    background-color: white; 
-    
-} */
-
-
 /* -----------  ниже вторая страница */
 
 .hotels-list {
@@ -289,7 +291,7 @@ img {
     margin-left: 40px;
     margin-right: 40px;
     background-color: white;
-}   /*типа центровщик, но при масштабировании все к левому краю прилипает, так и должно быть?*/
+} 
 
 .container {
     background-image: url(../img/background-photo.jpg);
@@ -327,7 +329,7 @@ img {
     margin-left: auto;
 }
 
-.site-navigation a { /* a, т.к. вся область должна быть ссылкой*/
+.site-navigation a { 
     display: block;
     width: 239px;
     text-align: center;
@@ -338,7 +340,7 @@ img {
     position: absolute;
     width: 140px;
     top: 0;
-    left: 570px; /* ??? почему позицинирование идет от левого окна, а не от main-navigation? */ 
+    left: 530px; 
 }
 
 .site-navigation .main-header-logo {
@@ -357,7 +359,7 @@ img {
 
 .background-bottom {
     /*position: absolute;  ??? - здесь же можно без абсолюта?*/  
-    margin-top: 21px;   
+    margin-top: 21px; 
     
     /* ??? снизу какое-то лишнее растояние у данного div, несколько пикселей вниз от картинки svg*/
 }
@@ -380,7 +382,7 @@ img {
 }
 
 .offer-text {
-    display: block;    /*  верно ли, что я тут блочную модель задал?  */
+    display: inline-block;
     margin-top: 28px;
 }
 
@@ -389,12 +391,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    
-    border: solid 1px black; /* временно */
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+
 }
-
-/*  ------- вообще всю форму бронирования проще было бы сделать на флексах, но у меня список и из-за этого флексами не получится. Грамотнее было бы контейнером сделать левую часть с названиями и правую с формами и позиционировать внутри было бы проще  */
-
 
 .booking-list {   
     padding: 0;
@@ -512,7 +511,7 @@ img {
     box-sizing: border-box;
     width: 38px;
     height: 38px;
-    margin: 0;  /* хочу задать кнопкам и полю одинаковую ширину и поставить их рядом без отступов - не получается*/
+    margin: 0; 
 }
 
 .search-button {
@@ -644,30 +643,12 @@ img {
     position: relative;
 }
 
-/*.hotel-item .more,
-.hotel-item .booking {
-    position: absolute;
-    bottom: 0;
-    padding: 3px 15px;
-
-.hotel-item .more {
-    left: 0;
-    box-sizing: border-box;
-    
-}
-
-.hotel-item .booking {
-    right: 0;
-    box-sizing: border-box;
-}
-}*/
-
 .hotel-item .more,
 .hotel-item .booking {
     display: inline-block;
     padding: 3px 15px;
     margin-bottom: 0;  /*??? почему это не приводит к прилипанию кнопки к нижней части родительского элемента??*/
-    margin-top: 10px;  */
+    margin-top: 10px;  
 }
 
 .hotel-item .more {
@@ -677,7 +658,6 @@ img {
 .rating {
     margin-right: 0;
     margin-left: auto;
-    /*position: relative;*/
 }
 
 .stars {
@@ -691,5 +671,4 @@ img {
     margin: 0;
     margin-top: 40px;
 }
-
 
