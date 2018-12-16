@@ -33,14 +33,16 @@ img {
 }
 
 .main-container {   /*??? не работает  */
+    width: 1200px;
     margin: 0 auto;
+    background-color: #f2f2f2;
+    position: relative;
 }
 
 .main-navigation a {  
     font-weight: 700;
     color: black;
-    background-color: white;
-    position: relative;
+
 }
 
 .site-navigation {
@@ -407,23 +409,44 @@ img {
 
 .booking-list li:nth-child(1)::after,
 .booking-list li:nth-child(2)::after { 
-    content: "";
+    /*content: "";
     position: absolute;
-    right: 20px;
-    top: 6px;
+    right: 10px;
+    top: 7px;
     background-image: url("../img/calendar.svg");
     width: 21px;
     height: 22px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+}
+
+/* ???? без псевдоэлементов выше абсолютное позиционирование почему-то не срабатывает*/
+
+.booking-list svg { 
+    position: absolute;
+    right: 10px;
+    fill: #cacaca;
+}
+
+.calendar-1 {
+    top: 7px;
+}
+
+.calendar-2 {
+    top: 75px;
+}
+
+.booking-list label:hover svg,
+.booking-list label:focus svg {
+    fill: #000000;    
+}
+
+.booking-list label:active svg {
+    fill: #81b3d2;    
 }
 
 .booking-list li:nth-child(2)::after { 
-    right: 20px;
-    top: 70px;
-}
-
-.booking-list li::after {
-    
+    right: 10px;
+    top: 75px;
 }
 
 .booking-form form {
@@ -439,36 +462,47 @@ img {
     padding-top: 32px;
 }
 
-/*.booking-list {
+.booking-list {
     display: flex;
     flex-wrap: wrap;
-}  ----- это если на флексах*/
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-between;
+    align-items: center;
+    
+} 
 
 .booking-list input {
     width: 346px;
-    padding: 5px 15px;
+    padding: 6px 15px;
     box-sizing: border-box;
-    margin-left: auto;
 }
 
-
-.booking-list input:nth-child(1),
-.booking-list input:nth-child(2) {
-    /* float: right; */ 
-    /* ?? флоат по вертикали выравнивает, а по горизонтали смещение происходит */ 
-}
-
-.booking-list li:nth-child(3){
-    display: inline-block;  /* ??? не могу понять как расположить в одной строке эти два элемента, это либо flex, либо inline-block? Плюс мне надо уменьшить ширину поля формы. + В первых двух полях формы на над полем иконка календаря висит, как с этим быть?*/
-    
-}
-.booking-list li:nth-child(4){
-    display: inline-block;
-    
-}
-
-.booking-list li:nth-child(3) {
+.booking-list label {
     display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.booking-list li:nth-child(3),
+.booking-list li:nth-child(4) {
+    display: flex;
+    width: 228px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adults-form,
+.kids-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.booking-list li:nth-child(4) label {
+    margin-left: 50px;
 }
 
 .quantity-button,
@@ -502,11 +536,6 @@ img {
     width: 1200px;
     padding: 0;
     justify-content: space-between;
-    /*padding-top: 35px;
-    padding-bottom: 35px;*/
-    background-color: rgba(0,0,0, .3); /* временно*/
-    
-
 }
 
 .footer-social ul{
@@ -515,7 +544,6 @@ img {
     justify-content: space-between;
     padding: 0;
     margin: 0 auto;
-
 }
 
 .hashtag {
@@ -530,20 +558,26 @@ img {
     margin: 0;
     margin-top: 39px;
     margin-right: 100px;
-    vertical-align: middle;
-
 }
 
-.creator-logo path {
+.creator-logo svg {
+    vertical-align: middle;
+}
+
+.creator-logo path,
+.creator-logo rect {
     fill: #231f20;
 }
 
 .creator-logo:focus path,
-.creator-logo:hover path {
+.creator-logo:hover path,
+.creator-logo:focus rect,
+.creator-logo:hover rect {
     fill: #81b3d2;
 }
 
-.creator-logo:active path {
+.creator-logo:active path,
+.creator-logo:active rect {
     fill: #bdbbbc;
 }
 
@@ -571,14 +605,9 @@ img {
     background-color: #5496bd;
 }
 
-
-.social-button img {
-    display: block;
-}
-
-.social-button img:active {
+.social-button:active img {
     opacity: 0.3;
-}   /* ??? не пойму, как без инлайна сделать так, чтобы при нажатии на весь квадрат иконка opacity приобретала, а не только на иконку*/
+} 
 
 
 /*---------стилизация 2ой страницы------- */
@@ -651,20 +680,16 @@ img {
     /*position: relative;*/
 }
 
-/*.rating .hotel-rating {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 120px;
+.stars {
     text-align: right;
-    padding-right: 15px;
-}*/
+}
 
 .hotel-rating {
-    display: inline-block;
+    display: block;
     width: 110px;
     text-align: center;
     margin: 0;
-
+    margin-top: 40px;
 }
+
 
