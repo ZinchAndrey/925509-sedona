@@ -394,9 +394,9 @@ img {
 .welcome::after {
     content: "";
     position: absolute;
-    background-image: url(../img/polygon-2.svg);
+    background-image: url(../img/polygon.svg);
     width: 1200px;
-    height: 57px;
+    height: 56px;
     background-repeat: no-repeat;
     bottom: 0;
     left: 0;
