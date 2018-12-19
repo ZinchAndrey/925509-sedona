@@ -448,15 +448,27 @@ img {
 }
 
 .modal-search-form {
-  /*  display: none;*/
-
+    display: none;
+    position: absolute;
 }
 
-modal-show {
-    display: flex;
-    z-index: 1;
-    position: absolute;
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(1000px);
+    }
     
+    50% {
+        transform: translateY(-20px);
+    }
+    
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 
@@ -469,7 +481,8 @@ modal-show {
 
 }
 
-.booking-list {   
+.booking-list { 
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     position: relative;
@@ -511,9 +524,9 @@ modal-show {
 .booking-form form {
     width: 460px;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 55px;
+    padding-left: 54px;
+    padding-right: 54px;
+    padding-top: 55px;
 }
 
 /*.booking-form h2 {
@@ -524,7 +537,6 @@ modal-show {
 
 .booking-form .hotel-search {
     box-sizing: border-box;
-    margin: 0 auto;
     padding-bottom: 32px;
     padding-top: 32px;
     width: 568px;
@@ -604,10 +616,6 @@ modal-show {
     padding-top: 20px;
     padding-bottom: 20px;
 
-}
-
-.booking {
-    padding-bottom: 78px;
 }
 
 .main-footer {
