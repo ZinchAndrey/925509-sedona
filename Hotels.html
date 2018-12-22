@@ -30,6 +30,62 @@
             </nav>
         </header>  
             <main class="inner-container">
+                <section class="filter">
+                    <section class="filter-block">
+                        <form class="infrastructure" action="https://www.sedona.com" method="get">
+                            <fieldset>
+                                <legend>Инфраструктура:</legend>
+                                <ul class="infrastructure-list">
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool-id" checked><label for="swimming-pool-id">Бассейн</label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking-id"><label for="parking-id">Парковка</label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi-id"><label for="wi-fi-id">Wi-fi</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Тип жилья:</legend>
+                                <ul class="infrastructure-list">
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel-id" checked><label for="hotel-id">Гостиница</label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel-id" checked><label for="motel-id">Мотель</label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments-id" checked><label for="apartments-id">Апартаменты</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                        <div class="filter-range">
+                            <div class="filter-range-title">Стоимость в сутки (р):</div>
+                            <div class="price-controls">
+                                <label class="min-price">
+                                    от <input type="text" name="min-price" value="0">
+                                </label>
+                                <label class="max-price">
+                                    до <input type="text" name="max-price" value="3000">
+                                </label>
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="range-toggle range-toggle-min"></div>
+                                <div class="range-toggle range-toggle-max"></div>
+                            </div>
+                            <button class="btn-transperent" type="submit">Показать</button>
+                        </div>
+                    </section>
+                    <section class="sorting-block">
+                        
+                    </section>
+                </section>
                 <section class="hotels">
                 <ul class="hotels-list">
                     <li> 

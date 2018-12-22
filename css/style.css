@@ -19,17 +19,22 @@ img {
     height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-container {
@@ -769,24 +774,28 @@ img {
 .reasons {
     color: white;
     background-color: #81b3d2;
-    padding: 46px 60px 60px;
+    padding: 46px 60px 10px;
     line-height: 21px;
     text-align: center;
     width: 400px;
     /*height: 256px; /* !! ???временно */
     box-sizing: border-box;
+
 }
 
 .reasons h3,
-.other-reasons h3 {
+.other-reasons h3,
+.features-block h3 {
     font-size: 21px;
+    line-height: 21px;
     margin: 0;
     padding: 0 50px;
     box-sizing: border-box;
-}
+}   /* здесь можно более глобально все h3 объединить */
 
 .reasons p,
-.other-reasons p {
+.other-reasons p,
+.features-description {
     margin-top: 25px;
     margin-bottom: 0;
 }
@@ -802,7 +811,7 @@ img {
 
 .features-block div{
     text-align: center;
-    width: 400px;
+    width: 400px;  
 }
 
 .reason-block-2 {
@@ -818,3 +827,183 @@ img {
     /*height: 256px; /* !! ???временно */
     box-sizing: border-box;   
 }
+
+.reason-block-1 img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-container {
+    height: 76px;
+    margin-bottom: 29px;
+    margin-top: 55px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.icon-container img {
+    margin: auto;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0; 
+    /* такой вариант центрирования в инете нашел. Как он работает? */
+}
+
+.features-description {
+    box-sizing: border-box;
+    padding: 0 40px;
+    line-height: 21px;
+}
+
+.features-block {
+    margin-bottom: 86px;
+}
+
+/*------------------ стилизация фильтра 2ой страницы---------*/
+
+
+.filter {
+    background-image: url(../img/filter-background.jpg);
+}
+
+.filter-block {
+    /*width: 240px; /* подправить после flex   */
+    color: white;
+    width: 1056px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-block fieldset {
+    border: none;
+    width: 175px;
+    margin: 0;
+    padding: 0;
+    margin-right: 73px; 
+    margin-bottom: 7px; /* в целом 30, но у элемента списка отступ--- */
+}
+
+.filter-block label {
+    line-height: 21px;
+    position: relative;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+}
+
+.filter-block legend {
+    line-height: 21px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-top: 28px;
+}
+
+.filter-block ul {
+    line-height: 21px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-option {
+    margin-bottom: 23px;
+    padding-left: 40px;
+    /*border: 1px solid black;*/
+}
+
+.infrastructure-list li:last-child {
+    margin-bottom: 30px;
+}
+
+.filter-option label::before {
+    content: "";
+    position: absolute;
+    /*border: 1px solid black;*/
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    top: -2px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+} 
+
+.filter-input:checked + label::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    top: -2px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    /* ??? я накладываю изображение поверх, а по идее нужно заменить, так как там разрывчик есть в изображении*/
+} 
+
+.infrastructure {
+    display: flex;
+}
+
+.filter-block {
+    display: flex;
+}
+
+
+.filter-range {
+    width: 330px;
+    margin-left: auto;
+}
+
+.filter-range-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 10px;
+}
+
+.price-controls {
+    height: 36px;
+    border: 2px solid white;
+    font-size: 0;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+}
+
+
+
