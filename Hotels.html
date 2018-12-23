@@ -79,15 +79,28 @@
                                 <div class="range-toggle range-toggle-min"></div>
                                 <div class="range-toggle range-toggle-max"></div>
                             </div>
-                            <button class="btn-transperent" type="submit">Показать</button>
+                            <button class="btn-transparent" type="submit">Показать</button>
                         </div>
-                    </section>
-                    <section class="sorting-block">
-                        
                     </section>
                 </section>
                 <section class="hotels">
-                <ul class="hotels-list">
+                    <div class="sorting-block">
+                        <div class="found">Найдено: 3</div>
+                        <form class="sorting" action="https://www.sedona.com" method="get">
+                            <fieldset>
+                                <legend class="visually-hidden">Сортировка:</legend>
+                                <span>Сортировка:</span>
+                                <label>По цене<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="price" id="price-id" checked></label>
+                                <label>По типу<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="type" id="type-id"></label>
+                                <label>По рейтингу<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="rating" id="rating-id"></label>
+                            </fieldset>
+                        </form>
+                        <div class="sorting-direction">
+                            <div class="arrow-up"></div>
+                            <div class="arrow-down active-arrow"></div>
+                        </div>
+                    </div>
+                    <ul class="hotels-list">
                     <li> 
                        <img src="img/amara-resort.jpg" alt="amara-resort">
                         <div class="hotel-item">
@@ -143,7 +156,7 @@
                        </div>
                     </li>
                 </ul>             
-            </section>
+                </section>
             </main>
             <footer class="main-footer">
                 <p class="hashtag">
