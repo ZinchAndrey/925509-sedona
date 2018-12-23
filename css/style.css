@@ -547,6 +547,7 @@ input[type="radio"].visually-hidden {
     padding-bottom: 30px;
     padding-top: 30px;
     width: 568px;
+    cursor: pointer;
    /* 
     width: 568px;   
     margin-left: auto;
@@ -621,7 +622,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 55px;
     padding-top: 16px;
     padding-bottom: 16px;
-
+    cursor: pointer;
 }
 
 .main-footer {
@@ -641,9 +642,14 @@ input[type="radio"].visually-hidden {
 
 .hashtag {
     margin: 0;
-    margin-left: 133px;
+    margin-left: 30px;
     margin-top: 50px;
     vertical-align: middle;
+}
+
+.hashtag-container {
+    width: 200px;
+    margin-left: 100px;
 }
 
 
@@ -887,8 +893,8 @@ input[type="radio"].visually-hidden {
     width: 175px;
     margin: 0;
     padding: 0;
-    margin-right: 73px; 
-    margin-bottom: 7px; /* в целом 30, но у элемента списка отступ--- */
+    margin-right: 77px; 
+    margin-bottom: 2px; /* в целом 30, но у элемента списка отступ--- */
 }
 
 .filter-block label {
@@ -1135,6 +1141,7 @@ input[type="radio"].visually-hidden {
     color: black;
     border: none;
 }
+
 
 /*input [type=radio]:checked + label {
     color: #81b3d2;
