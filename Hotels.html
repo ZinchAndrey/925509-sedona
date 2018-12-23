@@ -86,18 +86,15 @@
                 <section class="hotels">
                     <div class="sorting-block">
                         <div class="found">Найдено: 3</div>
-                        <form class="sorting" action="https://www.sedona.com" method="get">
-                            <fieldset>
-                                <legend class="visually-hidden">Сортировка:</legend>
-                                <span>Сортировка:</span>
-                                <label>По цене<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="price" id="price-id" checked></label>
-                                <label>По типу<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="type" id="type-id"></label>
-                                <label>По рейтингу<input class="input-radio visually-hidden" type="radio" name="sorting-type" value="rating" id="rating-id"></label>
-                            </fieldset>
-                        </form>
+                        <div class="sorting">
+                            <span>Сортировка:</span>
+                            <a class="sorting-link sorting-link-active" href="#">По цене</a>
+                            <a class="sorting-link" href="#">По типу</a>
+                            <a class="sorting-link" href="#">По рейтингу</a>
+                        </div> 
                         <div class="sorting-direction">
-                            <div class="arrow-up"></div>
-                            <div class="arrow-down active-arrow"></div>
+                            <a class="arrow-up" href="#"></a>
+                            <a class="arrow-down active-arrow" href="#"></a>
                         </div>
                     </div>
                     <ul class="hotels-list">

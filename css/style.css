@@ -933,7 +933,6 @@ input[type="radio"].visually-hidden {
 .filter-option label::before {
     content: "";
     position: absolute;
-    /*border: 1px solid black;*/
     width: 27px;
     height: 23px;
     left: -40px;
@@ -942,7 +941,7 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
 } 
 
-.filter-input:checked + label::after {
+.filter-input:checked + label::before {
     content: "";
     position: absolute;
     width: 27px;
@@ -951,7 +950,28 @@ input[type="radio"].visually-hidden {
     top: -2px;
     background-image: url(../img/checkbox-on.svg);
     background-repeat: no-repeat;
-    /* ??? я накладываю изображение поверх, а по идее нужно заменить, так как там разрывчик есть в изображении*/
+} 
+
+.filter-option-inactive label::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    top: -2px;
+    background-image: url(../img/checkbox-off-inactive.svg);
+    background-repeat: no-repeat;
+}
+
+.filter-input-inactive:checked + label::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    left: -40px;
+    top: -2px;
+    background-image: url(../img/checkbox-on-inactive.svg);
+    background-repeat: no-repeat;
 } 
 
 .infrastructure {
@@ -1115,14 +1135,14 @@ input[type="radio"].visually-hidden {
     padding: 30px 0;    
 }*/
 
-.sorting legend,
+
 .sorting span {
     font-size: 12px;
     line-height: 18px; 
     margin-left: 50px;
 }
 
-.sorting label {
+.sorting .sorting-link {
     font-size: 12px;
     line-height: 18px;
     color: #cacaca;
@@ -1132,21 +1152,21 @@ input[type="radio"].visually-hidden {
     margin-left: 30px;
 }
 
-.sorting label:hover,
-.sorting label:focus {
+.sorting .sorting-link:hover,
+.sorting .sorting-link:focus {
     color: #81b3d2;
 }
 
-.sorting label:active {
+.sorting .sorting-link:active {
     color: black;
     border: none;
 }
 
 
-/*input [type=radio]:checked + label {
+.sorting .sorting-link-active {
     color: #81b3d2;
     border: none;
-}   ---------каким селектором активную кнопку изменить стилями? ------------ */    
+}
 
 .sorting {
     padding: 30px 0;
@@ -1197,4 +1217,11 @@ input[type="radio"].visually-hidden {
 
 .arrow-down:active  {
 	border-top: 10px solid #81b3d2;
+}
+
+.map {
+    
+    height: 470px;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
 }
