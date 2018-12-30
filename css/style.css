@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0 40px;
-    font-family: 'PT Sans', 'Arial', sans-serif; 
+    font-family: "PT Sans", "Arial", sans-serif; 
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -22,19 +22,19 @@ img {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .main-container {
@@ -95,7 +95,7 @@ input[type="radio"].visually-hidden {
     color: #333333;
     background-color: white;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 24px;
     text-align: center;
 }
 
@@ -306,27 +306,63 @@ input[type="radio"].visually-hidden {
 }
 
 /* выравниевание элемнтов  с местом для эмблемы */ 
-.site-navigation li:nth-child(1),
+/*.site-navigation li:nth-child(1),
 .site-navigation li:nth-child(4) {
     margin: 0;
 }
 
 .site-navigation li:nth-child(2) {
     margin-left: 0;
-    margin-right: auto;
+   /* margin-right: auto;
 }
 
 .site-navigation li:nth-child(3) {
     margin-right: 0;
-    margin-left: auto;
+   /* margin-left: auto;
+}*/
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(2) {
+    text-align: left;
+    margin-right: auto;
+}
+
+.site-navigation li:nth-child(3),
+.site-navigation li:nth-child(4) {
+    text-align: right;
+}
+
+
+.site-navigation li {
+    width: 300px;
+    box-sizing: border-box;
 }
 
 .site-navigation a { 
-    display: block;
-    width: 239px;
-    text-align: center;
-    padding: 16px 0px;
+    display: inline-block;
+    vertical-align: middle;
+   /* width: 239px;*/
+    padding: 15px 5px;
+    box-sizing: border-box;
 }
+
+.nav-item:nth-child(1) a { 
+    margin-left: 66px;
+    margin-right: auto;
+}
+
+.nav-item:nth-child(2) a { 
+    margin-left: 8px;
+}
+
+.nav-item:nth-child(4) a { 
+    margin-right: 66px;
+}
+
+.nav-item:nth-child(3) a { 
+    margin-right: 10px;
+}
+
 
 .logo-container {
     position: absolute;
@@ -345,10 +381,10 @@ input[type="radio"].visually-hidden {
     display: block;
     margin-left: auto;
     margin-right: auto; 
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(159, 185, 203, 1);
     padding-top: 76px;
     background-image: url(../img/background-photo.jpg);
-    background-position: 50% 0px;
+    background-position: 50% -55px;
     background-repeat: no-repeat;
     padding-bottom: 79px;
 }
@@ -395,6 +431,8 @@ input[type="radio"].visually-hidden {
 .offer-text {
     display: inline-block;
     margin-top: 22px;
+    vertical-align: middle;
+    padding: 0 10px;
 }
 
 .modal-search-form {
@@ -609,6 +647,10 @@ input[type="radio"].visually-hidden {
     fill: #bdbbbc;
 }
 
+.creator-logo a{
+    color: #000000;
+}
+
 .footer-social {
     margin: 36px auto;
 }
@@ -663,6 +705,7 @@ input[type="radio"].visually-hidden {
 .hotel-type {
     display: inline-block;
     margin: 0;
+    vertical-align: middle;
 }
 
 .hotel-type {
@@ -682,6 +725,7 @@ input[type="radio"].visually-hidden {
     padding: 3px 15px;
     margin-bottom: 0;
     margin-top: 10px;  
+    vertical-align: middle;
 }
 
 .hotel-item .more {
@@ -736,15 +780,24 @@ input[type="radio"].visually-hidden {
 .reasons p,
 .other-reasons p,
 .features-description {
-    margin-top: 22px;
+    margin-top: 24px;
     margin-bottom: 0;
     font-weight: 400;
 }
 
-.reason-2 p {
-    padding-left: 30px;
-    padding-right: 30px;
+.reason-2{
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 400px;
+    box-sizing: border-box;
 }
+
+.reason-2 p {
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+} 
 
 .features-block {
     display: flex;
@@ -766,6 +819,21 @@ input[type="radio"].visually-hidden {
     text-align: center;
     width: 400px;
     box-sizing: border-box;   
+}
+
+.other-reasons:nth-child(3) p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.other-reasons:nth-child(3) h3 {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.other-reasons:nth-child(2) h3 {
+    padding-left: 65px;
+    padding-right: 65px;
 }
 
 .reason-block-1 img {
@@ -796,15 +864,26 @@ input[type="radio"].visually-hidden {
     line-height: 21px;
 }
 
-.features-block {
-    margin-bottom: 86px;
+.description-1 {
+    padding: 0 70px;
 }
+
+.description-2 {
+    padding: 0 50px;
+}
+
+.features-block {
+    margin-bottom: 85px;
+}
+
+
 
 /*------------------ стилизация фильтра 2ой страницы---------*/
 
 
 .filter {
     background-image: url(../img/filter-background.jpg);
+    background-color: rgba(91, 113, 132, 1);
 }
 
 .filter-block {
@@ -964,6 +1043,7 @@ input[type="radio"].visually-hidden {
     font: inherit;
     background: none;
     border: none;
+    line-height: 1;
 }
 
 .range-controls {
@@ -1050,7 +1130,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     border: none;
     width: 410px;
-    display: inline-block;
+
 }
 
 
@@ -1103,6 +1183,7 @@ input[type="radio"].visually-hidden {
 	border-right: 5px solid transparent;
 	border-bottom: 10px solid #cacaca;
     display: inline-block;
+    vertical-align: baseline;
 }
 
 .arrow-down {
@@ -1112,6 +1193,7 @@ input[type="radio"].visually-hidden {
 	border-right: 5px solid transparent;
 	border-top: 10px solid #cacaca;
     display: inline-block;
+    vertical-align: baseline;
     margin-left: 10px;
 }
 
