@@ -609,21 +609,23 @@ input[type="radio"].visually-hidden {
 
 .hashtag {
     margin: 0;
-    margin-left: 30px;
     margin-top: 50px;
     vertical-align: middle;
+    text-align: center;
 }
 
 .hashtag-container {
-    width: 200px;
-    margin-left: 100px;
+    width: 400px;
+    margin-left: 0;
 }
 
 
 .creator-logo {
+    width: 400px;
     margin: 0;
-    margin-top: 39px;
-    margin-right: 100px;
+    margin-top: 42px;
+    margin-right: 0px;
+    text-align: center;
 }
 
 .creator-logo svg {
@@ -884,6 +886,7 @@ input[type="radio"].visually-hidden {
 .filter {
     background-image: url(../img/filter-background.jpg);
     background-color: rgba(91, 113, 132, 1);
+    background-position: 0 -50px;
 }
 
 .filter-block {
@@ -898,7 +901,7 @@ input[type="radio"].visually-hidden {
     width: 175px;
     margin: 0;
     padding: 0;
-    margin-right: 77px; 
+    margin-right: 79px; 
     margin-bottom: 2px; 
 }
 
@@ -926,7 +929,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-option {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
     padding-left: 40px;
 }
 
@@ -1000,13 +1003,14 @@ input[type="radio"].visually-hidden {
     line-height: 21px;
     margin-bottom: 10px;
     padding-top: 28px;
+    padding-left: 2px;
 }
 
 .price-controls {
-    height: 36px;
+    height: 32px;
     border: 2px solid white;
     font-size: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     border-radius: 2px;
     position: relative;
 }
@@ -1025,15 +1029,19 @@ input[type="radio"].visually-hidden {
 .price-controls label {
     display: inline-block;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 32px;
     vertical-align: top;
     cursor: pointer;
 }
 
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
     width: 90px;
     padding-left: 65px;
+}
+
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 58px;
 }
 
 .price-controls input {
@@ -1090,7 +1098,8 @@ input[type="radio"].visually-hidden {
 .btn-transparent {
     display: block;
     margin: 0 auto;
-    padding: 6px 35px;
+    margin-left: 87px;
+    padding: 6px 34px;
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
@@ -1099,6 +1108,8 @@ input[type="radio"].visually-hidden {
     border: 2px solid #ffffff;
     border-radius: 2px;
     cursor: pointer;
+    box-sizing: border-box;
+
 }
 
 .btn-transparent:hover {
@@ -1137,7 +1148,7 @@ input[type="radio"].visually-hidden {
 .sorting span {
     font-size: 12px;
     line-height: 18px; 
-    margin-left: 50px;
+    margin-left: 48px;
 }
 
 .sorting .sorting-link {
@@ -1147,7 +1158,7 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
     border-bottom: 1px solid #81b3d2;
     border-bottom-style: dotted;
-    margin-left: 30px;
+    margin-left: 34px;
 }
 
 .sorting .sorting-link:hover,
