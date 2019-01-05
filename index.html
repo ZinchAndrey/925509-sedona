@@ -25,8 +25,8 @@
                 </nav>
             </header>
             <main class="container">
-                <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1> <!--Для читалок-->
-                <section class="welcome">  <!--данный блок выполняем набором изображений для ускорения загрузки сайта, т.к. в блоке содержится 4 шрифта-->
+                <h1 class="visually-hidden">Welcome to the georgeous Sedona</h1> 
+                <section class="welcome">  
                     <img src="img/welcome.svg" width="459" height="353" alt="Welcome to the gorgeous SEDONA 'because the grand canyon sucks'">
                 </section>
                 <section class="features">
@@ -91,10 +91,6 @@
                         <p>Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </section>
-                
-                
-                
-                
                 <section class="booking">
                     <div class="booking-header">
                         <span class="motivation-text">Заинтересовались?</span>
@@ -107,8 +103,8 @@
                         <section class="modal-search-form">
                             <form action="https://www.sedona.com" method="get">
                                 <ul class="booking-list">
-                                    <li>
-                                        <label>Дата заезда:
+                                    <li class="booking-item">
+                                        <label class="item-name">Дата заезда:
                                             <svg class="calendar-1" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                  width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                                                 <g id="calendar_1_">
@@ -133,8 +129,8 @@
                                             <input type="text" name="check-in" value="24 апреля 2017">
                                         </label>
                                     </li>
-                                    <li>
-                                        <label>Дата выезда:
+                                    <li class="booking-item">
+                                        <label class="item-name">Дата выезда:
                                             <svg class="calendar-2" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                  width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
                                                 <g id="calendar_2_">
@@ -159,16 +155,16 @@
                                             <input type="text" name="check-out" value="04 июля 2017">
                                         </label>
                                     </li>
-                                    <li>
-                                        <label for="adults">Взрослые:</label>
+                                    <li class="booking-item">
+                                        <label for="adults" class="item-name">Взрослые:</label>
                                         <div class="adults-form">
                                             <button class="quantity-button minus"></button>
                                             <input id="adults" type="text" name="number-of-adults" value="2">
                                             <button class="quantity-button plus"></button>
                                         </div>
                                     </li>
-                                    <li>
-                                        <label for="kids">Дети:</label>
+                                    <li class="booking-item">
+                                        <label for="kids" class="item-name">Дети:</label>
                                         <div class="kids-form">
                                             <button class="quantity-button minus"></button>
                                             <input id="kids" type="text" name="number-of-kids" value="0">
@@ -176,7 +172,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <button class="search-button">Найти</button>
+                                <button class="search-button" type="submit">Найти</button>
                             </form>
                         </section>
                     </div>
@@ -218,10 +214,25 @@
         <script>
             var link = document.querySelector(".hotel-search");
             var searchPopup = document.querySelector(".modal-search-form");
+            var form = searchPopup.querySelector("form");
+            var checkIn = searchPopup.querySelector("[name=check-in]");
+            var checkOut = searchPopup.querySelector("[name=check-out]");
+            var numberOfAdults = searchPopup.querySelector("[name=number-of-adults]");
+            var numberOfKids = searchPopup.querySelector("[name=number-of-kids]");
             
             link.addEventListener("click", function(evt) {
                 evt.preventDefault()
                 searchPopup.classList.toggle("modal-show")
+            });
+            
+            form.addEventListener("submit", function (evt) {
+                if (!checkIn.value || !checkOut.value || !numberOfAdults.value ||       !numberOfKids.value) {
+                    evt.preventDefault();
+                    searchPopup.classList.remove("modal-error");
+                    searchPopup.offsetWidth = searchPopup.offsetWidth;
+                    searchPopup.classList.add("modal-error");
+                    console.log("Заполните все поля формы");
+                }            
             });
         </script>
     </body>

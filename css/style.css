@@ -80,7 +80,7 @@ input[type="radio"].visually-hidden {
     line-height: 26px;    
     font-weight: 700;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .global-reasons {
@@ -340,22 +340,6 @@ input[type="radio"].visually-hidden {
     background-color: white;
 }
 
-/* выравниевание элемнтов  с местом для эмблемы */ 
-/*.site-navigation li:nth-child(1),
-.site-navigation li:nth-child(4) {
-    margin: 0;
-}
-
-.site-navigation li:nth-child(2) {
-    margin-left: 0;
-   /* margin-right: auto;
-}
-
-.site-navigation li:nth-child(3) {
-    margin-right: 0;
-   /* margin-left: auto;
-}*/
-
 .site-navigation li:nth-child(1),
 .site-navigation li:nth-child(2) {
     text-align: left;
@@ -521,14 +505,38 @@ input[type="radio"].visually-hidden {
     }
 }
 
+.modal-error {
+    animation: shake 0.6s;
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+      }
+    
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+      }
+}
 
 .booking-form {
     width: 568px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 45px;
+    margin-top: 47px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
-
 }
 
 .booking-list { 
@@ -557,12 +565,12 @@ input[type="radio"].visually-hidden {
     top: 75px;
 }
 
-.booking-list label:hover svg,
-.booking-list label:focus svg {
+.item-name:hover svg,
+.item-name:focus svg {
     fill: #000000;    
 }
 
-.booking-list label:active svg {
+.item-name:active svg {
     fill: #81b3d2;    
 }
 
@@ -579,7 +587,6 @@ input[type="radio"].visually-hidden {
     padding-top: 55px;
 }
 
-
 .booking-form .hotel-search {
     box-sizing: border-box;
     padding-bottom: 30px;
@@ -587,8 +594,6 @@ input[type="radio"].visually-hidden {
     width: 568px;
     cursor: pointer;
 }
-    
-
 
 .booking-list {
     display: flex;
@@ -596,8 +601,7 @@ input[type="radio"].visually-hidden {
     margin-left: 0;
     margin-right: 0;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center; 
 } 
 
 .booking-list input {
@@ -628,14 +632,14 @@ input[type="radio"].visually-hidden {
     justify-content: flex-end;
 }
 
-.booking-list li:nth-child(4) label {
+.booking-item:nth-child(4) label {
     margin-left: 50px;
 }
 
 .quantity-button,
 .quantity-button,
-.booking-list li:nth-child(3) input, /* можно ли такую вложенность использовать из 3 классов?*/
-.booking-list li:nth-child(4) input {
+.booking-item:nth-child(3) input,
+.booking-item:nth-child(4) input {
     box-sizing: border-box;
     width: 38px;
     height: 38px;
@@ -674,13 +678,9 @@ input[type="radio"].visually-hidden {
     margin-top: 47px;
     vertical-align: middle;
     text-align: center;
-}
-
-.hashtag{
     width: 400px;
     margin-left: 0;
 }
-
 
 .creator-logo {
     width: 400px;
@@ -693,6 +693,7 @@ input[type="radio"].visually-hidden {
 
 .creator-logo svg {
     vertical-align: middle;
+    padding-left: 5px;
 }
 
 .creator-logo path,
@@ -712,7 +713,7 @@ input[type="radio"].visually-hidden {
     fill: #bdbbbc;
 }
 
-.creator-logo a{
+.creator-logo a {
     color: #000000;
 }
 
@@ -727,8 +728,7 @@ input[type="radio"].visually-hidden {
     justify-content: center;
     width: 46px;
     height: 48px;
-    vertical-align: middle;
-    
+    vertical-align: middle;  
 }
 
 .social-button:hover,
@@ -825,7 +825,7 @@ input[type="radio"].visually-hidden {
 
 .reason-block-1 {
     display: flex;
-    margin-top: 48px;
+    margin-top: 50px;
 }
 
 .reasons {
@@ -836,7 +836,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
     width: 400px;
     box-sizing: border-box;
-
 }
 
 .reasons h3,
@@ -847,7 +846,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0 50px;
     box-sizing: border-box;
-}   /* здесь можно более глобально все h3 объединить */
+} 
 
 .reasons p,
 .other-reasons p,
@@ -865,10 +864,8 @@ input[type="radio"].visually-hidden {
 }
 
 .reason-2 p {
-
     padding-left: 5px;
     padding-right: 5px;
-
 } 
 
 .features-block {
@@ -927,7 +924,6 @@ input[type="radio"].visually-hidden {
     margin-bottom: 0;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0; 
-    /* такой вариант центрирования в инете нашел. Как он работает? */
 }
 
 .features-description {
@@ -948,10 +944,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 85px;
 }
 
-
-
 /*------------------ стилизация фильтра 2ой страницы---------*/
-
 
 .filter {
     background-image: url(../img/filter-background.jpg);
@@ -1065,7 +1058,6 @@ input[type="radio"].visually-hidden {
 .filter-block {
     display: flex;
 }
-
 
 /* ----------стилизация сложного фильтра ---------- */
 
@@ -1297,24 +1289,23 @@ input[type="radio"].visually-hidden {
 
 .arrow-up:hover,
 .arrow-up:focus  {
-	border-bottom: 10px solid black;
+    border-bottom: 10px solid black;
 }
 
 .arrow-up:active  {
-	border-bottom: 10px solid #81b3d2;
+    border-bottom: 10px solid #81b3d2;
 }
 
 .arrow-down:hover,
 .arrow-down:focus  {
-	border-top: 10px solid black;
+    border-top: 10px solid black;
 }
 
 .arrow-down:active  {
-	border-top: 10px solid #81b3d2;
+    border-top: 10px solid #81b3d2;
 }
 
-.map {
-    
+.map {    
     height: 470px;
     background-image: url(../img/map.jpg);
     background-repeat: no-repeat;
