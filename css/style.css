@@ -506,12 +506,15 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-error {
+    -webkit-animation: shake 0.6s;
     animation: shake 0.6s;
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
     0%,
     100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
     }
     
@@ -520,6 +523,8 @@ input[type="radio"].visually-hidden {
     50%,
     70%,
     90% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
         transform: translateX(-10px);
       }
     
@@ -527,6 +532,36 @@ input[type="radio"].visually-hidden {
     40%,
     60%,
     80% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+      }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+    
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px);
+      }
+    
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
         transform: translateX(10px);
       }
 }
