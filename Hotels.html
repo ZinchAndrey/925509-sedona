@@ -5,7 +5,7 @@
         <title>HTML Academy: Отели Седоны</title>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style-minimize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="main-container">
@@ -25,38 +25,37 @@
                 </nav>
             </header>  
             <main class="inner-container">
-                <section class="filter">
-                    <section class="filter-block">
-                        <form class="infrastructure" action="https://www.sedona.com" method="get">
-                            <fieldset>
-                                <legend>Инфраструктура:</legend>
-                                <ul class="infrastructure-list">
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool-id" checked><label for="swimming-pool-id">Бассейн</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="parking-id"><label for="parking-id">Парковка</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="wi-fi-id"><label for="wi-fi-id">Wi-fi</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Тип жилья:</legend>
-                                <ul class="infrastructure-list">
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="hotel-id" checked><label for="hotel-id">Гостиница</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="motel-id" checked><label for="motel-id">Мотель</label>
-                                    </li>
-                                    <li class="filter-option">
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="apartments-id" checked><label for="apartments-id">Апартаменты</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </form>
+                <h1 class="visually-hidden">Отели Седоны</h1>
+                <section class="filter-block">
+                    <form class="infrastructure" action="https://www.sedona.com" method="get">
+                        <fieldset>
+                            <legend>Инфраструктура:</legend>
+                            <ul class="infrastructure-list">
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="swimming-pool" id="swimming-pool-id" checked><label for="swimming-pool-id">Бассейн</label>
+                                </li>
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="parking" id="parking-id"><label for="parking-id">Парковка</label>
+                                </li>
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="wi-fi" id="wi-fi-id"><label for="wi-fi-id">Wi-fi</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Тип жилья:</legend>
+                            <ul class="infrastructure-list">
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="hotel" id="hotel-id" checked><label for="hotel-id">Гостиница</label>
+                                </li>
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="motel" id="motel-id" checked><label for="motel-id">Мотель</label>
+                                </li>
+                                <li class="filter-option">
+                                    <input class="visually-hidden filter-input" type="checkbox" name="apartments" id="apartments-id" checked><label for="apartments-id">Апартаменты</label>
+                                </li>
+                            </ul>
+                        </fieldset>
                         <div class="filter-range">
                             <div class="filter-range-title">Стоимость в сутки (р):</div>
                             <div class="price-controls">
@@ -76,13 +75,13 @@
                             </div>
                             <button class="btn-transparent" type="submit">Показать</button>
                         </div>
-                    </section>
+                    </form>
                 </section>
                 <section class="hotels">
                     <div class="sorting-block">
                         <div class="found">Найдено: 3</div>
                         <div class="sorting">
-                            <span>Сортировка:</span>
+                            <h2>Сортировка:</h2>
                             <a class="sorting-link sorting-link-active" href="#">По цене</a>
                             <a class="sorting-link" href="#">По типу</a>
                             <a class="sorting-link" href="#">По рейтингу</a>
@@ -104,10 +103,10 @@
                         </div>    
                         <div class="rating">
                             <div class="stars">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
+                                <img src="img/star.svg" alt="4 звезды" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
                             </div>    
                             <span class="hotel-rating">Рейтинг: 8,5</span>
                         </div>
@@ -123,9 +122,9 @@
                         </div>    
                         <div class="rating">
                             <div class="stars">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
+                                <img src="img/star.svg" alt="3 звезды" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
                             </div>
                             <span class="hotel-rating">Рейтинг: 8,9</span>
                         </div>
@@ -141,8 +140,8 @@
                         </div>    
                         <div class="rating">
                             <div class="stars">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
-                                <img src="img/star.svg" alt="звезда" width="18" height="17">
+                                <img src="img/star.svg" alt="2 звезды" width="18" height="17">
+                                <img src="img/star.svg" alt="" width="18" height="17">
                             </div>    
                             <span class="hotel-rating">Рейтинг: 9,2</span>
                        </div>
@@ -152,7 +151,7 @@
             </main>
             <footer class="main-footer">
                 <p class="hashtag"> 
-                    <a>#VISITSEDONA</a>
+                    <a href="#">#VISITSEDONA</a>
                 </p>
                 <div class="footer-social">
                     <ul>

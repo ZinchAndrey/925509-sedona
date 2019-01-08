@@ -23,15 +23,12 @@ img {
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
     position: absolute;
-    
     width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
     padding: 0;
-    
     white-space: nowrap;
-    
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
@@ -59,7 +56,6 @@ input[type="radio"].visually-hidden {
 .main-navigation a {  
     font-weight: 700;
     color: black;
-
 }
 
 .site-navigation {
@@ -75,20 +71,34 @@ input[type="radio"].visually-hidden {
     color: #b2b2b2;
 }
 
-.features h2 { 
+/*.features h2 { 
     font-size: 21px;
     line-height: 26px;    
     font-weight: 700;
     text-align: center;
     margin-bottom: 28px;
+}*/
+
+.reason-block-1 h2 { 
+    font-size: 21px;
+    line-height: 26px;    
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+    width: 1200px;
+    padding-left: 312px;
+    padding-right: 312px;
+    margin-top: 60px;
+    margin-bottom: 28px;
 }
 
 .global-reasons {
-    display: block;
+    width: 1200px;
     color: #333333;
     background-color: white;
     font-weight: 400;
     text-align: center; 
+    margin-bottom: 50px;
 }
 
 .offer-text  {
@@ -360,7 +370,6 @@ input[type="radio"].visually-hidden {
 .site-navigation a { 
     display: inline-block;
     vertical-align: middle;
-   /* width: 239px;*/
     padding: 15px 5px;
     box-sizing: border-box;
 }
@@ -430,13 +439,13 @@ input[type="radio"].visually-hidden {
     background-size: 1200px 57px;   
 }
 
-.features {
+/*.features {
     width: 575px;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto; 
     background-color: white;
-}
+}*/
 
 
 .booking-header {
@@ -586,7 +595,39 @@ input[type="radio"].visually-hidden {
     width: 460px;
 }
 
-.booking-list svg { 
+.calendar-button {
+    width: 21px;
+    height: 22px;
+    outline: none;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: url(../img/calendar.svg) no-repeat center center;
+    background-size: 21px 22px;
+    right: 10px;
+}
+
+.calendar-button-check-in {
+    top: 7px;
+}
+
+.calendar-button-check-out {
+    top: 75px;
+}
+
+.calendar-button:hover,
+.calendar-button:focus {
+    background: url(../img/calendar-hover.svg) no-repeat center center;
+    background-size: 21px 22px;
+}
+
+.calendar-button:active {
+    background: url(../img/calendar-active.svg) no-repeat center center;
+    background-size: 21px 22px;
+}
+
+/*.booking-list svg { 
     position: absolute;
     right: 10px;
     fill: #cacaca;
@@ -607,7 +648,7 @@ input[type="radio"].visually-hidden {
 
 .item-name:active svg {
     fill: #81b3d2;    
-}
+}*/
 
 .booking-list li:nth-child(2)::after { 
     right: 10px;
@@ -715,6 +756,10 @@ input[type="radio"].visually-hidden {
     text-align: center;
     width: 400px;
     margin-left: 0;
+}
+
+.hashtag a {
+    color: #000000;
 }
 
 .creator-logo {
@@ -846,6 +891,7 @@ input[type="radio"].visually-hidden {
     display: inline-block;
     margin-left: 1px;
     margin-top: -50px;
+    vertical-align: baseline;
 }
 
 .hotel-rating {
@@ -860,7 +906,7 @@ input[type="radio"].visually-hidden {
 
 .reason-block-1 {
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .reasons {
@@ -946,20 +992,49 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-.icon-container {
+/*.icon-container {
     height: 76px;
     margin-bottom: 29px;
     margin-top: 55px;
     box-sizing: border-box;
     position: relative;
+    background-image: url(../img/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}*/
+
+.features-block h3 {
+    padding-top: 160px;
 }
 
-.icon-container img {
+.house-block h3 {
+    background-image: url(../img/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    background-size: 75px 72px;
+}
+
+.food-block h3 {
+    background-image: url(../img/icon-3.svg);
+    background-repeat: no-repeat;
+    background-position: center 60px;  
+    background-size: 74px 70px;
+}
+
+.souveniers-block h3 {
+    background-image: url(../img/icon-2.svg);
+    background-repeat: no-repeat;
+    background-position: center 58px; 
+    background-size: 64px 76px;
+}
+
+
+/*.icon-container img {
     margin: auto;
     margin-bottom: 0;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0; 
-}
+}*/
 
 .features-description {
     box-sizing: border-box;
@@ -981,17 +1056,22 @@ input[type="radio"].visually-hidden {
 
 /*------------------ стилизация фильтра 2ой страницы---------*/
 
-.filter {
+/*.filter {
     background-image: url(../img/filter-background.jpg);
     background-color: rgba(91, 113, 132, 1);
     background-position: 0 -50px;
-}
+}*/
 
 .filter-block {
     color: white;
-    width: 1056px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 72px;
+    padding-right: 72px;
+    background-image: url(../img/filter-background.jpg);
+    background-color: rgba(91, 113, 132, 1);
+    background-position: 0 -50px;    
 }
 
 .filter-block fieldset {
@@ -1088,6 +1168,7 @@ input[type="radio"].visually-hidden {
 
 .infrastructure {
     display: flex;
+    width: 1056px;
 }
 
 .filter-block {
@@ -1098,7 +1179,7 @@ input[type="radio"].visually-hidden {
 
 .filter-range {
     width: 319px;
-    margin-left: auto;
+    margin-left: 229px;
 }
 
 .filter-range-title {
@@ -1251,10 +1332,11 @@ input[type="radio"].visually-hidden {
 }
 
 
-.sorting span {
+.sorting h2 {
     font-size: 12px;
-    line-height: 18px; 
+    line-height: 12px; 
     margin-left: 48px;
+    display: inline;
 }
 
 .sorting .sorting-link {
