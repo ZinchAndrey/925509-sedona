@@ -71,14 +71,6 @@ input[type="radio"].visually-hidden {
     color: #b2b2b2;
 }
 
-/*.features h2 { 
-    font-size: 21px;
-    line-height: 26px;    
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 28px;
-}*/
-
 .reason-block-1 h2 { 
     font-size: 21px;
     line-height: 26px;    
@@ -129,7 +121,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
     text-transform: uppercase;
     border: 0;
-    
 }
 
 .booking-form .hotel-search:hover,
@@ -203,8 +194,6 @@ input[type="radio"].visually-hidden {
 .minus:active::after {
     background: #81b3d2;
 }
-
-
 
 .booking-form input {
     border: none;
@@ -314,7 +303,6 @@ input[type="radio"].visually-hidden {
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
-
 }
 
 .hotels .booking:hover,
@@ -332,7 +320,6 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
     font-size: 14px;
     line-height: 21px;
-
 }
 
 /* ------------ ниже разметка по горизонтали*/
@@ -360,7 +347,6 @@ input[type="radio"].visually-hidden {
 .site-navigation li:nth-child(4) {
     text-align: right;
 }
-
 
 .site-navigation li {
     width: 300px;
@@ -390,7 +376,6 @@ input[type="radio"].visually-hidden {
 .nav-item:nth-child(3) a { 
     margin-right: 10px;
 }
-
 
 .logo-container {
     position: absolute;
@@ -422,7 +407,6 @@ input[type="radio"].visually-hidden {
     margin: 0 auto;
 }
 
-
 .container {
     position: relative;
 }
@@ -439,33 +423,30 @@ input[type="radio"].visually-hidden {
     background-size: 1200px 57px;   
 }
 
-/*.features {
-    width: 575px;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto; 
-    background-color: white;
-}*/
-
-
 .booking-header {
     width: 568px;
     text-align: center;
     margin-left: auto;
     margin-right: auto; 
-    margin-top: 50px;
+    padding-top: 50px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 47px;
+    background-color: #ffffff;
 }
 
 .offer-text {
     display: inline-block;
-    margin-top: 22px;
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 40px;
+    padding-top: 22px;
+    box-sizing: border-box;
 }
 
 .modal-search-form {
     display: none;
     position: absolute;
+    z-index: 1;
 }
 
 .modal-show {
@@ -476,15 +457,15 @@ input[type="radio"].visually-hidden {
 
 @-webkit-keyframes bounce {
     0% {
-        -webkit-transform: translateY(1000px);
-        -ms-transform: translateY(1000px);
-        transform: translateY(1000px);
+        -webkit-transform: translateY(-400px);
+        -ms-transform: translateY(-400px);
+        transform: translateY(-400px);
     }
     
     50% {
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-350px);
+        -ms-transform: translateY(-350px);
+        transform: translateY(-350px);
     }
     
     100% {
@@ -496,15 +477,15 @@ input[type="radio"].visually-hidden {
 
 @keyframes bounce {
     0% {
-        -webkit-transform: translateY(1000px);
-        -ms-transform: translateY(1000px);
-        transform: translateY(1000px);
+        -webkit-transform: translateY(-400px);
+        -ms-transform: translateY(-400px);
+        transform: translateY(-400px);
     }
     
-    50% {
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px);
+    25% {
+        -webkit-transform: translateY(-350px);
+        -ms-transform: translateY(-350px);
+        transform: translateY(-350px);
     }
     
     100% {
@@ -579,7 +560,6 @@ input[type="radio"].visually-hidden {
     width: 568px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 47px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
 
@@ -669,6 +649,8 @@ input[type="radio"].visually-hidden {
     padding-top: 30px;
     width: 568px;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .booking-list {
@@ -824,7 +806,6 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 } 
 
-
 /*---------стилизация 2ой страницы------- */
 
 .active-page {
@@ -960,6 +941,8 @@ input[type="radio"].visually-hidden {
 
 .reason-block-2 {
     display: flex;
+    position: relative;
+    z-index: 2;
 }
 
 .other-reasons {
@@ -1028,7 +1011,6 @@ input[type="radio"].visually-hidden {
     background-size: 64px 76px;
 }
 
-
 /*.icon-container img {
     margin: auto;
     margin-bottom: 0;
@@ -1090,9 +1072,6 @@ input[type="radio"].visually-hidden {
     user-select: none;
     cursor: pointer;
 }
-
-
-/* ?????????? */
 
 .filter-block label:focus {
     outline: 2px #81b3d2 solid;
@@ -1296,7 +1275,6 @@ input[type="radio"].visually-hidden {
     border-radius: 2px;
     cursor: pointer;
     box-sizing: border-box;
-
 }
 
 .btn-transparent:hover {
@@ -1310,7 +1288,7 @@ input[type="radio"].visually-hidden {
     width: 1056px;
     margin-left: auto;
     margin-right: auto;
-    height: 87px; /* временно */
+    height: 87px;
     background-image: none;
     display: flex;
 }
@@ -1328,7 +1306,6 @@ input[type="radio"].visually-hidden {
     margin: 0;
     border: none;
     width: 410px;
-
 }
 
 
