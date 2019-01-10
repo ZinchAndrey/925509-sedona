@@ -325,7 +325,7 @@ input[type="radio"].visually-hidden {
 /* ------------ ниже разметка по горизонтали*/
 
 .main-header {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgb(255, 255, 255);
 }
 
 .site-navigation {
@@ -606,29 +606,6 @@ input[type="radio"].visually-hidden {
     background: url(../img/calendar-active.svg) no-repeat center center;
     background-size: 21px 22px;
 }
-
-/*.booking-list svg { 
-    position: absolute;
-    right: 10px;
-    fill: #cacaca;
-}
-
-.calendar-1 {
-    top: 7px;
-}
-
-.calendar-2 {
-    top: 75px;
-}
-
-.item-name:hover svg,
-.item-name:focus svg {
-    fill: #000000;    
-}
-
-.item-name:active svg {
-    fill: #81b3d2;    
-}*/
 
 .booking-list li:nth-child(2)::after { 
     right: 10px;
@@ -975,17 +952,6 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
-/*.icon-container {
-    height: 76px;
-    margin-bottom: 29px;
-    margin-top: 55px;
-    box-sizing: border-box;
-    position: relative;
-    background-image: url(../img/icon-1.svg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-}*/
-
 .features-block h3 {
     padding-top: 160px;
 }
@@ -1011,13 +977,6 @@ input[type="radio"].visually-hidden {
     background-size: 64px 76px;
 }
 
-/*.icon-container img {
-    margin: auto;
-    margin-bottom: 0;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0; 
-}*/
-
 .features-description {
     box-sizing: border-box;
     padding: 0 40px;
@@ -1037,12 +996,6 @@ input[type="radio"].visually-hidden {
 }
 
 /*------------------ стилизация фильтра 2ой страницы---------*/
-
-/*.filter {
-    background-image: url(../img/filter-background.jpg);
-    background-color: rgba(91, 113, 132, 1);
-    background-position: 0 -50px;
-}*/
 
 .filter-block {
     color: white;
@@ -1308,7 +1261,6 @@ input[type="radio"].visually-hidden {
     width: 410px;
 }
 
-
 .sorting h2 {
     font-size: 12px;
     line-height: 12px; 
@@ -1339,7 +1291,6 @@ input[type="radio"].visually-hidden {
     color: black;
     border: none;
 }
-
 
 .sorting .sorting-link-active {
     color: #81b3d2;
