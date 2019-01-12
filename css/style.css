@@ -446,12 +446,12 @@ input[type="radio"].visually-hidden {
 .modal-search-form {
     display: none;
     position: absolute;
-    z-index: 1;
 }
 
 .modal-show {
     display: block;
     animation: bounce 0.7s;
+    position: absolute;
 }
 
 @keyframes bounce {
