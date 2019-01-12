@@ -6,9 +6,10 @@ var checkOut = searchPopup.querySelector("[name=check-out]");
 var numberOfAdults = searchPopup.querySelector("[name=number-of-adults]");
 var numberOfKids = searchPopup.querySelector("[name=number-of-kids]");
 
+
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    searchPopup.classList.toggle("modal-search-form");
+    searchPopup.classList.toggle("modal-show");
 });
 
 form.addEventListener("submit", function (evt) {
