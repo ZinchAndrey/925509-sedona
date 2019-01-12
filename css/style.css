@@ -1065,6 +1065,10 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
 } 
 
+.filter-option input:focus + label::before {
+    outline: #81b3d2 1px dotted;
+}
+
 .filter-input:checked + label::before {
     content: "";
     position: absolute;
