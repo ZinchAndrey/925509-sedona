@@ -8,7 +8,7 @@ var numberOfKids = searchPopup.querySelector("[name=number-of-kids]");
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
-    searchPopup.classList.toggle("modal-show");
+    searchPopup.classList.toggle("modal-search-form");
 });
 
 form.addEventListener("submit", function (evt) {
