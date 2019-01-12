@@ -1,11 +1,13 @@
 var link = document.querySelector(".hotel-search");
-var searchPopup = document.querySelector(".modal-search-form");
+var searchPopup = document.querySelector(".modal-show");
 var form = searchPopup.querySelector("form");
 var checkIn = searchPopup.querySelector("[name=check-in]");
 var checkOut = searchPopup.querySelector("[name=check-out]");
 var numberOfAdults = searchPopup.querySelector("[name=number-of-adults]");
 var numberOfKids = searchPopup.querySelector("[name=number-of-kids]");
 
+searchPopup.classList.remove("modal-show");
+searchPopup.classList.add("modal-search-form");
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
